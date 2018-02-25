@@ -1,0 +1,18 @@
+<!--pages/user/mail/mail.wxml-->
+<view class='mailList'>
+  <view class='tip'>
+    <view class='userLogo'>
+      <image></image>
+    </view>
+    <view class='content'>
+      <view class='top'>
+        <view class='userName'>喵小姐的鱼</view>
+        <view class='time'>下午17:12</view>
+      </view>
+      <view class='bottom'>
+        <view class='dialogue'>是这样的，你们还有其他颜色吗？</view>
+        <view class='num'>5</view>
+      </view>
+    </view>
+  </view>
+</view>

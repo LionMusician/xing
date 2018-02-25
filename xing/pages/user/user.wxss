@@ -1,0 +1,32 @@
+/* pages/user/user.wxss */
+.container{width: 100%;}
+.userInfo{position:relative;width: 100%;height: 480rpx;}
+.userInfo .bgPic{position: absolute;top: 0;left: 0;width: 750rpx;height: 480rpx;z-index: -1;}
+.userInfo>view{text-align: center;}
+ .userInfo .avatar{height: 196rpx;} 
+.userInfo .avatar>image{width: 146rpx;height: 146rpx;border-radius: 50%;margin: 50rpx 0rpx 0rpx;}
+.userInfo .userBtn{position: absolute;top: 30rpx;right: 0;}
+.userInfo .userBtn .mail{width: 46rpx;height: 40rpx;margin-right: 10rpx;position: relative;padding: 20rpx;}
+.userInfo .userBtn:after{content: '';display: block;width: 14rpx;height: 14rpx;background: #8050EB;border-radius: 50%;position: absolute;top: 20rpx;left: 56rpx;}
+.userInfo .userBtn .set{width: 45rpx;height: 44rpx;margin-right: 30rpx;padding: 20rpx;}
+
+.userInfo .userName{color: #fff;font-size: 34rpx;margin: 20rpx 0 20rpx;}
+.userInfo .userName image{width: 26rpx;height: 26rpx;vertical-align: middle;}
+.userInfo .userWord{color: #f1f1f1;font-size: 26rpx;margin: 0rpx;}
+.userInfo .friend{text-align: center;margin: 50rpx 0;}
+.userInfo .friend>view{display: inline-block;color: #999;font-size: 26rpx;}
+.userInfo .friend .fans{margin: 0 84rpx;}
+.userInfo .friend text{font-size: 36rpx;color: #fff;}
+.money{width: 690rpx;height:180rpx;background: #fff;border-radius: 20rpx;margin: -58rpx auto 0;position: relative;z-index: 2;text-align: center;font-size: 32rpx;}
+.money .box{width: 100%;padding: 60rpx 0rpx;}
+.money .box>view{height: 60rpx;line-height: 60rpx;width: 344rpx;}
+.money image{vertical-align: middle;margin-right: 30rpx;}
+.money text{display: inline-block;}
+.money .earn{border-right: 2rpx solid #cdcdcd;color: #666;float: left;box-sizing: content-box;}
+.money .earn image{width: 34rpx;height: 40rpx;display: inline-block;}
+.money .order{color: #8050ed;float: left;}
+.money .order image{width: 36rpx;height: 42rpx;}
+.videos{margin-top: 30rpx;width: 100%;}
+.videos .nav{width: 100%;height: 88rpx;display: flex;flex-direction: row;justify-content: space-around;}
+.videos .nav .navTip{flex: 1;text-align: center;line-height: 88rpx;height: 88rpx;font-size: 32rpx;color: #999999;}
+.videos .nav .active{background: #8050EB;color: #fff;}

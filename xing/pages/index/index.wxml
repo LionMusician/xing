@@ -1,0 +1,62 @@
+<!--index.wxml-->
+<import src="../../template/tabBar.wxml" />
+<template is="tabBar" data="{{tabBar: tabBar}}" />
+<block wx:if="{{goodsView.show}}">
+  <template is="goodsView" data="{{goodsView: goodsView}}" /> 
+</block>
+<view class="container">
+  <!--是否显示圆点，自动播放， 间隔时间， 监听滚动和点击事件-->
+  <!-- <swiper duration="500" bindchange="" style='height:{{swiperHeight}}px' > -->
+  <swiper duration="500" bindchange="" >
+  <!--swiper-item只能包含一个节点再多会自动删除-->
+      <swiper-item>
+          <swiper duration="500" bindchange="" vertical='true' >
+            <!--swiper-item只能包含一个节点再多会自动删除-->
+                <swiper-item>
+                    <view>
+                      <view class='searchBtn'>
+                        <image src='../images/index/search.png'></image>
+                      </view>
+                      <view class='funBtns'>
+                        <view class="tip">
+                          <image src='../images/index/zzzzz@2x.png' style='width:65rpx;height:57rpx;'></image>
+                          <text>72.5W</text>
+                        </view>
+                        <view class="tip">
+                          <image src='../images/index/xiaoxi@2x.png' style='width:62rpx;height:60rpx;'></image>
+                          <text>1.5W</text>
+                        </view>
+                        <view class="tip">
+                          <image src='../images/index/fenxiang@2x.png' style='width:62rpx;height:62rpx;'></image>
+                          <text>1.2W</text>
+                        </view>
+                      </view>
+                      <view class='videoInfo'>
+                        <view class='userLogo'>
+                          <image src='../images/index/head-1@2x.png' class='userPic'></image>
+                          <text>视频文字介绍……</text>
+                          <image src='../images/index/guanzhu@2x.png' class='follow'></image>
+                        </view>
+                        <view class='brandName' bindtap='showGoodsView'>品牌名称可点击</view>
+                      </view>
+                    </view>
+                </swiper-item>
+                <swiper-item>
+                    <view style="background: green;"></view>
+                </swiper-item>
+                    <swiper-item>
+                      <view style="background: blue;"></view>
+                </swiper-item>
+            </swiper>
+      </swiper-item>
+      <swiper-item>
+          <view style="background: green;"></view>
+      </swiper-item>
+          <swiper-item>
+            <view style="background: blue;"></view>
+      </swiper-item>    
+  </swiper>
+  <!-- <view class='goodsView' wx:if="{{goodsView}}">
+    
+  </view> -->
+</view>

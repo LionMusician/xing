@@ -1,0 +1,6 @@
+<!--pages/user/myEarn/cash/cash.wxml-->
+<view class='cashInput'>
+  <text>提现金额：</text>
+  <input type='number'></input>
+  <text>元</text>
+</view>

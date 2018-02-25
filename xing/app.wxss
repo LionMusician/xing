@@ -1,0 +1,11 @@
+/**app.wxss**/
+page{background: #1A1D26;height: 100%;}
+view{box-sizing: border-box;}
+.cells{width: 730rpx;margin: 19rpx auto;color: #fff;font-size: 32rpx;}
+.cell{background: #21212b;padding: 20rpx;height: 72rpx;line-height: 72rpx;width: 690rpx;margin: 0rpx auto 1rpx;box-sizing: content-box;}
+.cell>view{display: inline-block;}
+.cell_ft{float: right;}
+.borderTop{border-radius: 10rpx 10rpx 0 0;}
+.borderBottom{border-radius: 0 0 10rpx 10rpx;}
+.borderAll{border-radius: 10rpx;}
+.nextBtn{width: 18rpx;height: 34rpx;vertical-align: middle;}

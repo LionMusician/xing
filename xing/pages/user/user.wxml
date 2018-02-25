@@ -1,0 +1,49 @@
+<!--pages/user/user.wxml-->
+<import src="../../template/tabBar.wxml" />  
+<template is="tabBar" data="{{tabBar: tabBar}}" />  
+<view class="container">
+  <view class='userInfo'>
+    <image class='bgPic' src='http://mi4c.cn/imgs/me@2x.png' mode='widthFix'></image>
+    <view class='avatar'>
+      <image src='{{userInfo.avatarUrl}}' mode='aspectFit'></image>
+    </view>
+    <view class='userBtn'>
+      <image src='../images/user/mail@2x.png' class='mail' bindtap='toMail'></image>
+      <image src='../images/user/shezhi@2x.png' class='set' bindtap='toSet'></image>
+    </view>
+    <view class='userName'>{{userInfo.nickName}}
+      <image src='../images/user/man@2x.png' wx:if="{{userInfo.gender == 1}}"></image>
+      <image src='../images/user/women@2x.png' wx:if="{{userInfo.gender == 0}}"></image>
+    </view>
+    <view class='userWord'>输了你就算赢了世界又如何！你又不懂我的真心！</view>
+    <view class='friend'>
+      <view>
+        <text>{{followNum}}128</text>关注
+      </view>
+      <view class='fans'>
+        <text>{{fansNum}}1345</text>粉丝
+      </view>
+      <view>
+        <text>{{praiseNum}}345</text>赞
+      </view>
+    </view>
+  </view>
+  <view class='money'>
+    <view class='box'>
+      <view class='earn' bindtap='toMyEarn'>
+        <image src='../images/user/money@2x.png'></image>
+        <text>我的收益</text>
+      </view>
+      <view class='order' bindtap='toMyOrder'>
+        <image src='../images/user/list@2x.png'></image>
+        <text>我的订单</text>
+      </view>
+    </view>
+  </view>
+  <view class='videos'>
+    <view class='nav'>
+      <view class='navTip' bindtap='showMyVideo' style='background:{{showMyVideoBgColor}};color:{{showMyVideoColor}}'>我的视频</view>
+      <view class='navTip' bindtap='showMylove' style='background:{{showMyloveBgColor}};color:{{showMyloveColor}}'>喜欢</view>
+    </view>
+  </view>
+</view>

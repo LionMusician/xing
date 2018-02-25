@@ -1,0 +1,17 @@
+/* pages/user/myEarn/myEarn.wxss */
+.moneyBox{width: 100%;height: 260rpx;background: #21212b;padding: 40rpx 0 30rpx;}
+.moneyBox .moneyLogo{text-align: center;margin: 0rpx auto 30rpx;height: 80rpx;width: 100%;}
+.moneyBox .moneyLogo image{width: 80rpx;height: 80rpx;}
+.moneyBox .balance{font-size: 40rpx;color: #fff;text-align: center;width: 100%;margin: 0;}
+.moneyBox .income{text-align: center;width: 100%;color: #999;font-size: 26rpx;margin: 20rpx 0 0;}
+.incomeList{width: 100%;margin-top: 30rpx;}
+.incomeList .income{width: 730rpx;margin: 0rpx auto 12rpx;border-radius: 20rpx;background: #21212b;}
+.incomeList .income .top{display: flex;flex-direction: row;}
+.incomeList .income .top .userLogo{margin: 30rpx 20rpx 20rpx;}
+.incomeList .income .top .userLogo image{width: 80rpx;height: 80rpx;border-radius: 10rpx;background: red;}
+.incomeList .income .top .title{font-size: 30rpx;color: #fff;line-height: 40rpx;margin: 30rpx 20rpx 0 0;}
+.incomeList .income .top .title text{color: #8050eb;}
+.incomeList .income .bottom{display: flex;flex-direction: row;justify-content: space-between;font-size: 26rpx;margin: 0 20rpx 0rpx;padding-bottom: 30rpx;}
+.incomeList .income .bottom .userName{color: #fff;}
+.incomeList .income .bottom .time{color: #999;}
+.bottomBtn{position: fixed;bottom: 0;width: 100%;height: 100rpx;background: #8050eb;color: #fff;text-align: center;line-height: 100rpx;font-size: 32rpx;}

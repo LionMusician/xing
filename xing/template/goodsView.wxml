@@ -1,0 +1,28 @@
+<template name="goodsView">
+  <view class='goods showGoodsView' wx:if="{{showBuyUrl}}">
+    <image class='closeBtn' src='../images/shot/close@2x.png' bindtap='closeBuyUrl'></image>
+    <image src='{{goodsUrlTarget.url}}'></image>
+    <view class='title' bindtap='showGoodsInfo'>
+      <view>{{goodsUrlTarget.title}}</view>
+      <view class='price'>¥1299</view>
+    </view>
+    <view class='buyBtn'>立即购买</view>
+  </view>
+  <view class='showGoodsView goodsInfoClass' wx:if="{{showGoodsInfo}}">
+    <image class='closeBtn' src='../images/shot/close@2x.png' bindtap='closeGoodsInfo'></image>
+    <view class='title'>商品详情</view>
+    <view class='scrollView'>
+      <image class='goodsBigPic'></image>
+      <view class='goodsName'>{{goodsUrlTarget.title}}</view>
+      <view class='price'><text>价格：</text>¥299</view>
+      <view class='colorfulTitle'>颜色展示</view>
+      <view class='colorfulPics'>
+        <view class='picBox' wx:for="{{colorfulPics}}" wx:key="*this">
+          <image src='{{item.url}}' mode='widthFix'></image>
+          <view class='picTitle'>/{{item.color}}/</view>
+        </view>
+      </view>
+    </view>
+    <view class='chooseToShot'>拍这个</view>
+  </view>
+</template>
