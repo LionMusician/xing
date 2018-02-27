@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/index/search/search",
     "pages/shot/shot",
     "pages/user/user",
     "pages/user/set/set",

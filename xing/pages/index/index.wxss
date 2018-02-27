@@ -14,3 +14,11 @@ swiper-item>view{height: 100%;position: relative;}
 .videoInfo .userLogo .follow{width: 32rpx;height: 32rpx;position: absolute;top: 68rpx;left: 26rpx;}
 .videoInfo .userLogo text{font-size: 26rpx;color: #fff;}
 .videoInfo .brandName{font-size: 28rpx;color: #e36159;padding: 40rpx 40rpx 40rpx 0;}
+.hoverView{position: fixed;top: 0;bottom: 0;left: 0;right: 0;z-index: 101;}
+.shareView{width: 100%;background: #fff;height: 330rpx;border-radius: 20rpx 20rpx 0rpx 0rpx;position: fixed;z-index: 101;bottom: 0;left: 0;}
+.shareView .top{font-size: 28rpx;color: #666;width: 690rpx;margin: 40rpx auto;border-bottom: 2rpx solid #ebebeb;padding-bottom: 40rpx;}
+.shareView .list{width: 690rpx;display: flex;flex-direction: row;margin: 40rpx auto;}
+.shareView .list .tip{display: flex;flex-direction: column;width: 180rpx;justify-content: center;text-align: center;}
+.shareView .list .tip image{width: 80rpx;height: 80rpx;margin: 0 auto 22rpx;}
+.shareView .list .tip text{font-size: 28rpx;color: #333;text-align: center;}
+.closeBtn{position: absolute;width: 24rpx;height: 24rpx;padding:22rpx;margin: 0;top: 0;right: 0;}

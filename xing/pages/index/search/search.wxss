@@ -1,0 +1,20 @@
+/* pages/index/search/search.wxss */
+.swiper-tab{width: 100%;border-bottom: 1rpx solid #272734;text-align: center;line-height: 88rpx;display: flex;flex-direction: row;height: 92rpx;position: fixed;top: 150rpx;z-index: 100;background: #1A1D26;}
+.swiper-tab-list{font-size: 32rpx;color: #999;flex: 1;}
+.swiper-tab-list text{display: inline-block;width: 160rpx;}
+.on{color: #fff;border-bottom: 4rpx solid #8050eb;}
+.swiper-box{display: block; height: 100%; width: 100%; overflow: hidden;padding-top: 122rpx;}  
+.swiper-box view{text-align: center;}
+.goodsList{width: 100%;}
+.goodsList .goods{position: relative;}
+.goodsList .goods .title{text-align: left;line-height: 40rpx;}
+.goodsList .goods .videoNum{color: #999;font-size: 26rpx;text-align: right;position: absolute;right: 20rpx;bottom: 20rpx;}
+
+.userList{width: 100%;}
+.userList .user{display: flex;flex-direction: row;justify-content: space-between;height: 120rpx;}
+.userList .user .userView{}
+.userList .user .userLogo{width: 80rpx;height: 80rpx;margin: 20rpx;border-radius: 10rpx;background: red;}
+.userList .user .userInfo{display: flex;flex-direction: column;text-align: left;margin: 26rpx 0;}
+.userList .user .userInfo .userName{font-size: 30rpx;margin-bottom: 14rpx;text-align: left;}
+.userList .user .fansNum{font-size: 26rpx;color: #999;text-align: left;}
+.userList .user .works{text-align: right;line-height: 120rpx;margin-right: 20rpx;}

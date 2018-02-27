@@ -69,6 +69,12 @@
 					"name": "私信",
 					"pathName": "pages/user/mail/mail",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "pages/index/search/search",
+					"query": ""
 				}
 			]
 		}

@@ -25,6 +25,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // wx.request({
+    //   url: `${app.globalData.globalUrl}/u/wxlogin`,
+    //   method:"post",
+    //   data: {
+    //     'appId':`wxff9b12c8a5c45f6e`
+    //   },
+    //   header: { 'content-type': 'application/json' },
+    //   success: (res) => {
+    //     console.log(res.data)
+    //   }
+    // })
     wx.setNavigationBarTitle({title:"个人主页"});
     if (app.globalData.userInfo) {
       this.setData({

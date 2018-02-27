@@ -31,7 +31,8 @@ Page({
           id: 3, url: "http://www.mi4c.cn/imgs/sp-tu@2x.png", color: "蓝色"
         }
       ]
-    }
+    },
+    followUrl:"../images/index/zzzzz@2x.png"
   },
   onLoad: function () {
     var that = this;
@@ -85,7 +86,28 @@ Page({
   showGoodsInfo: function () {
     this.setData({"goodsView.goodsInfoHeightNow":1000})
   },
+  //关闭商品详情
   closeGoodsInfo: function () {
     this.setData({ "goodsView.showGoodsInfo": false })
+  },
+  //跳转到搜索页面
+  toSearch:function(){
+    wx.navigateTo({
+      url: 'search/search',
+    })
+  },
+  //点赞
+  follow:function(){
+    this.setData({
+      followUrl: this.data.followUrl == "../images/index/zzzzz@2x.png" ? "../images/index/red-zan@2x.png" : "../images/index/zzzzz@2x.png"
+      })
+  },
+  //显示分享弹窗
+  showShare:function(){
+    this.setData({shareViewShow:true})
+  },
+  //关闭分享弹窗
+  closeShareView:function(){
+    this.setData({ shareViewShow: false })   
   }
 })

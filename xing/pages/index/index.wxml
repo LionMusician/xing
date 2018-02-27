@@ -15,18 +15,18 @@
                 <swiper-item>
                     <view>
                       <view class='searchBtn'>
-                        <image src='../images/index/search.png'></image>
+                        <image src='../images/index/search.png' bindtap='toSearch'></image>
                       </view>
                       <view class='funBtns'>
-                        <view class="tip">
-                          <image src='../images/index/zzzzz@2x.png' style='width:65rpx;height:57rpx;'></image>
+                        <view class="tip" bindtap='follow'>
+                          <image src='{{followUrl}}' style='width:65rpx;height:57rpx;'></image>
                           <text>72.5W</text>
                         </view>
                         <view class="tip">
                           <image src='../images/index/xiaoxi@2x.png' style='width:62rpx;height:60rpx;'></image>
                           <text>1.5W</text>
                         </view>
-                        <view class="tip">
+                        <view class="tip" bindtap='showShare'>
                           <image src='../images/index/fenxiang@2x.png' style='width:62rpx;height:62rpx;'></image>
                           <text>1.2W</text>
                         </view>
@@ -56,7 +56,24 @@
             <view style="background: blue;"></view>
       </swiper-item>    
   </swiper>
-  <!-- <view class='goodsView' wx:if="{{goodsView}}">
-    
-  </view> -->
+  <view class='hoverView' wx:if="{{shareViewShow}}">
+    <view class='shareView'>
+      <view class='top'>分享至</view>
+      <view class='list'>
+        <view class='weixin tip'>
+          <image src='../images/index/weixin@2x.png'></image>
+          <text>微信好友</text>
+        </view>
+        <view class='friends tip'>
+          <image src='../images/index/pengyou@2x.png'></image>
+          <text>朋友圈</text>
+        </view>
+        <view class='qq tip'>
+          <image src='../images/index/QQ@2x.png'></image>
+          <text>QQ</text>
+        </view>
+      </view>
+      <image class='closeBtn' src='../images/shot/close@2x.png' bindtap='closeShareView'></image>
+    </view>
+  </view>
 </view>

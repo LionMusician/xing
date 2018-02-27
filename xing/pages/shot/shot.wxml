@@ -2,10 +2,7 @@
 <import src="../../template/tabBar.wxml" />  
 <template is="tabBar" data="{{tabBar: tabBar}}" /> 
 <view class='container'>
-  <view class='searchBar'>
-    <input placeholder='搜索商品' placeholder-style='font-size:30rpx;color:#999;'></input>
-    <text>搜索</text>
-  </view>
+  <template is="searchBar" data="{{searchBar: searchBar}}" />
   <view class='goodsList'>
     <view class='goods' wx:for="{{goodsList}}" wx:key="*id" bindtap='showBuyUrl' data-goods='{{item}}'>
       <image src='{{item.url}}'></image>

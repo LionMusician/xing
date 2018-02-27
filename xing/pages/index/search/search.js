@@ -1,30 +1,32 @@
-// pages/user/myOrder/myOrder.js
+// pages/index/search/search.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    winWidth: 0,
-    winHeight: 0,
+    searchBar:{},
     // tab切换  
-    currentTab: 0,
+    currentTab: 0, 
+    goodsList: [
+      {
+        id: 1, url: "http://www.mi4c.cn/imgs/sp-tu@2x.png", title: "阿迪达斯滑板拼色潮玩耐用2018新款滑板"
+      },
+      {
+        id: 2, url: "http://www.mi4c.cn/imgs/sp-tu@2x.png", title: "阿迪达斯滑板拼色潮玩耐用2018新款滑板chuang"
+      },
+      {
+        id: 3, url: "http://www.mi4c.cn/imgs/sp-tu@2x.png", title: "阿迪达斯滑板拼色潮玩耐用2018新款滑板asdadsad"
+      }
+    ],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.setNavigationBarTitle({ title: "我的订单" })
-    var that = this;
-    //获取系统信息
-    wx.getSystemInfo({
-      success: function (res) {
-        that.setData({
-          winWidth: res.windowWidth,
-          winHeight: res.windowHeight
-        });
-      }  
+    wx.setNavigationBarTitle({
+      title: '搜索',
     })
   },
 

@@ -44,3 +44,10 @@
     </view>
   </view>
 </template>
+
+<template name="searchBar">
+  <view class='searchBar' style='margin: 30rpx auto 40rpx;width: 706rpx;display:flex;flex-direction:row;'>
+    <input placeholder='搜索商品' placeholder-style='font-size:30rpx;color:#999;' style='width: 540rpx;height: 80rpx;border-radius: 40rpx;background: #3D3E48;padding: 0 30rpx;margin-right: 30rpx;color: #fff;font-size: 30rpx;'></input>
+    <text style='color: #fff;display: inline-block;height: 80rpx;line-height: 80rpx;font-size: 30rpx;'>搜索</text>
+  </view>
+</template>
