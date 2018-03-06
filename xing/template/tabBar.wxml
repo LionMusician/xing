@@ -40,7 +40,10 @@
           </view>
         </view>
       </view>
-      <view class='chooseToShot'>拍这个</view>
+      <view class='bottom'>
+        <button class='toShotPage' style='width:{{goodsView.toShotPageWidth}}rpx' bindtap='toShotVideo'>拍这个</button>
+        <button class='toBuyPage' style='width:{{goodsView.toBuyPageWidth}}rpx'>立即购买</button>
+      </view>
     </view>
   </view>
 </template>

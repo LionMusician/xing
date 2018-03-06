@@ -28,6 +28,19 @@ App({
       }
     })
   },
+  request:()=>{
+    wx.request({
+      url: `${app.globalData.globalUrl}?token=${wx.getStorageSync('token')}`,
+      method: `post`,
+      data: {
+        
+      },
+      header: { 'content-type': 'application/json' },
+      success: res => {
+        console.log(res)
+      }
+    })
+  },
   globalData: {
     userInfo: null,
     globalUrl:`https://api.zhongmuart.com`

@@ -25,52 +25,89 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // wx.request({
-    //   url: `${app.globalData.globalUrl}/u/wxlogin`,
-    //   method:"post",
-    //   data: {
-    //     'appId':`wxff9b12c8a5c45f6e`
-    //   },
-    //   header: { 'content-type': 'application/json' },
-    //   success: (res) => {
-    //     console.log(res.data)
-    //   }
-    // })
+    var that = this;
     wx.setNavigationBarTitle({title:"个人主页"});
     if (app.globalData.userInfo) {
-      this.setData({
+      that.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
-    } else if (this.data.canIUse) {
+      that.getUsers()
+    } else if (that.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
-        this.setData({
+        that.setData({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
+        that.getUsers()
       }
     } else {
       // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
+      wx.login({
         success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
+          if (res.code) {
+            console.log(res.code)
+            wx.request({
+              url: `${app.globalData.globalUrl}/u/wxlogin?appId=wxff9b12c8a5c45f6e&code=${res.code}`,
+              method: `post`,
+              data: {
+
+              },
+              header: { 'content-type': 'application/json' },
+              success: res => {
+                console.log(res)
+                wx.setStorageSync('userId', res.data.userId);
+                wx.setStorageSync('token', res.data.token);
+                wx.getUserInfo({
+                  success: res => {
+                    console.log(res.userInfo)
+                    var userInfo = res.userInfo;
+                    app.globalData.userInfo = res.userInfo
+                    that.setData({
+                      userInfo,
+                      hasUserInfo: true
+                    })
+                    wx.request({
+                      url: `${app.globalData.globalUrl}/u/users/${wx.getStorageSync('userId')}?token=${wx.getStorageSync('token')}`,
+                      method: `put`,
+                      data: {
+                        "avatarUrl": userInfo.avatarUrl,
+                        "chatAuth": "ALL",
+                        "country": userInfo.language,
+                        "gender": userInfo.gender,
+                        "id": wx.getStorageSync('userId'),
+                        "nickName": userInfo.nickName,
+                      },
+                      header: { 'content-type': 'application/json' },
+                      success: res => {
+                        console.log(res)
+                      }
+                    })
+                  }
+                })
+              }
+            })
+          }
         }
       })
     }
-    console.log(this.data.userInfo)
   },
-  getUserInfo: function (e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+  //获取已授权用户的个人信息
+  getUsers:function(){
+    var that = this;
+    wx.request({
+      url: `${app.globalData.globalUrl}/u/users/${wx.getStorageSync('userId')}?token=${wx.getStorageSync('token')}`,
+      method: `get`,
+      data: {
+        
+      },
+      header: { 'content-type': 'application/json' },
+      success: res => {
+        console.log(res.data)
+        that.setData({userInfoGet:res.data})
+      }
     })
   },
 

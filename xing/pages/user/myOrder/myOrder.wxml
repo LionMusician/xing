@@ -16,7 +16,7 @@
 <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
     <swiper-item>
       <view class='orderList'>
-        <view class='order'>
+        <view class='order' bindtap='toOrderInfo'>
           <view class='orderInfo'>
             <view class='goodsLogo'>
               <image src=''></image>

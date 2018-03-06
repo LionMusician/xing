@@ -97,5 +97,11 @@ Page({
         currentTab: e.currentTarget.dataset.current
       })
     }
-  }  
+  },
+  //跳转到订单详情页
+  toOrderInfo:function(){
+    wx.navigateTo({
+      url: 'orderInfo/orderInfo',
+    })
+  }
 })

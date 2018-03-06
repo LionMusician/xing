@@ -22,7 +22,7 @@
                           <image src='{{followUrl}}' style='width:65rpx;height:57rpx;'></image>
                           <text>72.5W</text>
                         </view>
-                        <view class="tip">
+                        <view class="tip" bindtap='showComment'>
                           <image src='../images/index/xiaoxi@2x.png' style='width:62rpx;height:60rpx;'></image>
                           <text>1.5W</text>
                         </view>
@@ -74,6 +74,74 @@
         </view>
       </view>
       <image class='closeBtn' src='../images/shot/close@2x.png' bindtap='closeShareView'></image>
+    </view>
+  </view>
+  <view class='hoverView' wx:if="{{commentViewShow}}">
+    <view class='shareView commentView'>
+      <view class='top'>共有15276条评论</view>
+      <view class='list'>
+        <view class='tip'>
+          <image class='userLogo' src=''></image>
+          <view class='commentBox'>
+            <view class='comment'>
+              <view class='userName'>喵小姐的鱼</view>
+              <view class='content'>什么鬼啊，完全看不懂啊！我之前买过一个，说实话，还可以的。</view>
+              <view class='time'>12:56:58</view>
+            </view>
+            <view class='heart'>
+              <image src='../images/index/zan-black@2x.png'></image>
+              <text>2</text>
+            </view>
+          </view>
+        </view>
+        <view class='tip'>
+          <image class='userLogo' src=''></image>
+          <view class='commentBox'>
+            <view class='comment'>
+              <view class='userName'>喵小姐的鱼</view>
+              <view class='content'>什么鬼啊，完全看不懂啊！我之前买过一个，说实话，还可以的。</view>
+              <view class='time'>12:56:58</view>
+            </view>
+            <view class='heart'>
+              <image src='../images/index/zan-black@2x.png'></image>
+              <text>2</text>
+            </view>
+          </view>
+        </view>
+        <view class='tip'>
+          <image class='userLogo' src=''></image>
+          <view class='commentBox'>
+            <view class='comment'>
+              <view class='userName'>喵小姐的鱼</view>
+              <view class='content'>什么鬼啊，完全看不懂啊！我之前买过一个，说实话，还可以的。</view>
+              <view class='time'>12:56:58</view>
+            </view>
+            <view class='heart'>
+              <image src='../images/index/zan-black@2x.png'></image>
+              <text>2</text>
+            </view>
+          </view>
+        </view>
+        <view class='tip'>
+          <image class='userLogo' src=''></image>
+          <view class='commentBox'>
+            <view class='comment'>
+              <view class='userName'>喵小姐的鱼</view>
+              <view class='content'>什么鬼啊，完全看不懂啊！我之前买过一个，说实话，还可以的。什么鬼啊，完全看不懂啊！我之前买过一个，说实话，还可以的。什么鬼啊，完全看不懂啊！我之前买过一个，说实话，还可以的。</view>
+              <view class='time'>12:56:58</view>
+            </view>
+            <view class='heart' bindtap='commentFollow'>
+              <image src='{{zanSrc}}'></image>
+              <text style='color:{{zanNum}}'>2</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='bottom'>
+        <input placeholder='请发表您的评论' placeholder-style='font-size:30rpx;color:#999;' cursor-spacing='10'></input>
+        <button>发送</button>
+      </view>
+      <image class='closeBtn' src='../images/shot/close@2x.png' bindtap='closeCommentView'></image>
     </view>
   </view>
 </view>

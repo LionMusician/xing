@@ -7,7 +7,7 @@
 .userInfo .avatar>image{width: 146rpx;height: 146rpx;border-radius: 50%;margin: 50rpx 0rpx 0rpx;}
 .userInfo .userBtn{position: absolute;top: 30rpx;right: 0;}
 .userInfo .userBtn .mail{width: 46rpx;height: 40rpx;margin-right: 10rpx;position: relative;padding: 20rpx;}
-.userInfo .userBtn:after{content: '';display: block;width: 14rpx;height: 14rpx;background: #8050EB;border-radius: 50%;position: absolute;top: 20rpx;left: 56rpx;}
+.userInfo .userBtn .mailAfter{display: block;width: 14rpx;height: 14rpx;background: #8050EB;border-radius: 50%;position: absolute;top: 15rpx;left: 56rpx;}
 .userInfo .userBtn .set{width: 45rpx;height: 44rpx;margin-right: 30rpx;padding: 20rpx;}
 
 .userInfo .userName{color: #fff;font-size: 34rpx;margin: 20rpx 0 20rpx;}

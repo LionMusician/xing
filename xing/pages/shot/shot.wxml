@@ -33,6 +33,6 @@
         </view>
       </view>
     </view>
-    <view class='chooseToShot'>拍这个</view>
+    <view class='chooseToShot' bindtap='toShotVideo'>拍这个</view>
   </view>
 </view>

@@ -30,9 +30,12 @@ Page({
         {
           id: 3, url: "http://www.mi4c.cn/imgs/sp-tu@2x.png", color: "蓝色"
         }
-      ]
+      ],
+      toShotPageWidth:"330",
+      toBuyPageWidth:"420"
     },
-    followUrl:"../images/index/zzzzz@2x.png"
+    followUrl:"../images/index/zzzzz@2x.png",
+    zanSrc:"../images/index/zan-black@2x.png",
   },
   onLoad: function () {
     var that = this;
@@ -109,5 +112,20 @@ Page({
   //关闭分享弹窗
   closeShareView:function(){
     this.setData({ shareViewShow: false })   
+  },
+  //显示评论弹窗
+  showComment:function(){
+    this.setData({commentViewShow:true})
+  },
+  //关闭评论弹窗
+  closeCommentView:function(){
+    this.setData({commentViewShow:false})
+  },
+  //评论点赞
+  commentFollow:function(){
+    this.setData({
+      zanSrc: "../images/index/zan-black@2x.png" || "../images/index/zan@2x.png",
+      zanNum:"#e36159" || ""
+    })
   }
 })

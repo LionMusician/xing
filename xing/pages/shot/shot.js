@@ -110,6 +110,12 @@ Page({
   toShot: function () {
     
   },
+  //进入拍视频页面
+  toShotVideo:function(){
+    wx.navigateTo({
+      url: 'shotVideo/shotVideo',
+    })
+  },
   //显示商品链接
   showBuyUrl:function(event){
     var that = this;

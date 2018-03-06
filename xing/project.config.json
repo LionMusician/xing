@@ -36,12 +36,6 @@
 				},
 				{
 					"id": -1,
-					"name": "个人",
-					"pathName": "pages/user/user",
-					"query": ""
-				},
-				{
-					"id": -1,
 					"name": "拍视频",
 					"pathName": "pages/shot/shot",
 					"query": ""
@@ -74,6 +68,18 @@
 					"id": -1,
 					"name": "搜索",
 					"pathName": "pages/index/search/search",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "私信详情",
+					"pathName": "pages/user/mail/privateLetter/privateLetter",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "上传视频",
+					"pathName": "pages/shot/shotVideo/shotVideo",
 					"query": ""
 				}
 			]

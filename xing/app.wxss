@@ -1,13 +1,11 @@
 /**app.wxss**/
 page{background: #1A1D26;height: 100%;color: #fff;}
 view{box-sizing: border-box;}
-.cells{width: 730rpx;margin: 19rpx auto;color: #fff;font-size: 32rpx;}
-.cell{background: #21212b;padding: 20rpx;height: 72rpx;line-height: 72rpx;width: 690rpx;margin: 0rpx auto 1rpx;box-sizing: content-box;}
+.cells{width: 730rpx;margin: 19rpx auto;color: #fff;font-size: 32rpx;border-radius: 10rpx;padding-left: 20rpx;background: #21212b;}
+.cell{padding: 20rpx 20rpx 20rpx 0;height: 72rpx;line-height: 72rpx;width: 690rpx;box-sizing: content-box;border-bottom: 2rpx solid #1A1D26;}
+.cellLast{border: none;}
 .cell>view{display: inline-block;}
 .cell_ft{float: right;}
-.borderTop{border-radius: 10rpx 10rpx 0 0;}
-.borderBottom{border-radius: 0 0 10rpx 10rpx;}
-.borderAll{border-radius: 10rpx;}
 .nextBtn{width: 18rpx;height: 34rpx;vertical-align: middle;}
 
 .goods{width: 730rpx;margin: 0 auto 12rpx;background: #21212b;border-radius: 20rpx;height: 180rpx;}

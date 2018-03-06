@@ -12,7 +12,7 @@
 .orderInfo .goodsLogo image{width: 140rpx;height: 140rpx;background: red;border-radius: 10rpx;}
 .orderInfo .goodsInfo{margin: 30rpx 20rpx 0 0;display: flex;flex-direction: column;}
 .orderInfo .goodsInfo .top{font-size: 30rpx;color: #fff;line-height: 40rpx;display: flex;flex-direction: row;justify-content: space-between;height: 80rpx;margin-bottom: 30rpx;}
-.orderInfo .goodsInfo .top .title{text-align: left;margin-right: 3em;}
+.orderInfo .goodsInfo .top .title{text-align: left;margin-right: 50rpx;}
 .orderInfo .goodsInfo .top .price{color: #e36159;}
 .orderInfo .goodsInfo .bottom{font-size: 26rpx;color: #999;display: flex;flex-direction: row;justify-content: space-between;}
 .orderState{width: 100%;}

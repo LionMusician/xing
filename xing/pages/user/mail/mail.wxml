@@ -1,6 +1,6 @@
 <!--pages/user/mail/mail.wxml-->
 <view class='mailList'>
-  <view class='tip'>
+  <view class='tip' bindtap='toPrivateLetter'>
     <view class='userLogo'>
       <image></image>
     </view>
