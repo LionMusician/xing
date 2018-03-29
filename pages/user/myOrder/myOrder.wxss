@@ -1,0 +1,9 @@
+/* pages/user/myOrder/myOrder.wxss */
+.swiper-tab{width: 100%;border-bottom: 1rpx solid #21212b;text-align: center;line-height: 88rpx;display: flex;flex-direction: row;height: 92rpx;position: fixed;top: 0;z-index: 100;background: #1A1D26;} 
+.swiper-tab-list{font-size: 32rpx;color: #999;flex: 1;}
+.swiper-tab-list text{display: inline-block;width: 140rpx;}
+.on{color: #fff;border-bottom: 4rpx solid #8050eb;}
+.swiper-box{ display: block; width: 100%;padding-top: 122rpx;}  
+.swiper-box view{text-align: center;}
+swiper-item{overflow-y:scroll}
+swiper-item .orderList{padding-bottom: 100rpx;}

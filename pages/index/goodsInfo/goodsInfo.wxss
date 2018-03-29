@@ -1,0 +1,3 @@
+/* pages/index/goodsInfo/goodsInfo.wxss */
+@import "../../../template/goodsView.wxss";
+.bgImage{width: 100%;height: 100%;z-index: -1;}

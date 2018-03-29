@@ -1,0 +1,12 @@
+/* pages/user/userlist/userlist.wxss */
+.noUser{display: flex;flex-direction: column;justify-content: center;width: 100%;}
+.noUser image{width: 80rpx;height: 80rpx;margin: 188rpx auto 50rpx;}
+.noUser view{font-size: 28rpx;color: #999;text-align: center;}
+.userList{width: 100%;margin-top: 30rpx;}
+.userView{width: 730rpx;height: 126rpx;border-radius: 20rpx;background: #21212b;margin: 0 auto 12rpx;display: flex;flex-direction: row;justify-content: space-between;}
+.userView .left{display: flex;flex-direction: row;}
+.userView .left image{width: 86rpx;height: 86rpx;border-radius: 10rpx;background: red;margin: 20rpx;}
+.userView .left .user{margin: 21rpx 0;}
+.userView .left .user .userName{font-size: 30rpx;line-height: 44rpx;}
+.userView .left .user .fans{font-size: 26rpx;color: #999;line-height: 40rpx;}
+.userView .right{font-size: 26rpx;color: #999;line-height: 126rpx;margin-right: 20rpx;}

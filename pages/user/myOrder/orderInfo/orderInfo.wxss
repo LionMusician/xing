@@ -1,0 +1,17 @@
+/* pages/user/myOrder/orderInfo/orderInfo.wxss */
+.takeOverInfo{width: 730rpx;height: 380rpx;background: #21212b;border-radius: 20rpx;margin: 30rpx auto 40rpx;}
+.orderInfo{width: 710rpx;height: 200rpx;margin-left: 20rpx;border-bottom: 2rpx solid #1b1c26;}
+.orderInfo .goodsLogo{margin: 30rpx 20rpx 30rpx 0;}
+.orderInfo .goodsInfo .top .price{color: #e36159;}
+.ownerInfo{margin: 30rpx 20rpx;font-size: 28rpx;color: #cdcdcd;}
+.ownerInfo .contact{display: flex;flex-direction: row;justify-content: space-between;}
+.ownerInfo image{margin-right: 20rpx;vertical-align: middle;}
+.ownerInfo .contact view{line-height: 28rpx;margin-bottom: 30rpx;}
+.ownerInfo .address{display: flex;flex-direction: row;justify-content: flex-start;}
+.ownerInfo .address view{line-height: 36rpx;}
+.businessInfo{margin: 0 30rpx;width: 690rpx;}
+.businessInfo view{font-size: 28rpx;color: #cdcdcd;margin-bottom: 30rpx;line-height: 36rpx;}
+.orderState{position: absolute;bottom: 0rpx;}
+.orderState .shipped{margin: 10rpx;}
+.orderState .shipped text{margin-bottom: 20rpx;}
+

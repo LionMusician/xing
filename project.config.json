@@ -1,0 +1,98 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.91",
+	"appid": "wxa738fdc55157db47",
+	"projectname": "shotVideo",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "快递",
+					"pathName": "pages/courier/courier",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "拍视频",
+					"pathName": "pages/shot/shot",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "设置",
+					"pathName": "pages/user/set/set",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "收益",
+					"pathName": "pages/user/myEarn/myEarn",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单",
+					"pathName": "pages/user/myOrder/myOrder",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "user",
+					"pathName": "pages/user/user",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "pages/index/search/search",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "视频编辑",
+					"pathName": "pages/user/editVideo/editVideo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "上传视频",
+					"pathName": "pages/shot/shotVideo/shotVideo",
+					"query": ""
+				},
+				{
+					"id": 9,
+					"name": "他人主页",
+					"pathName": "pages/user/otherUser/otherUser",
+					"query": ""
+				}
+			]
+		}
+	}
+}

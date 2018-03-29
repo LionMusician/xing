@@ -1,0 +1,57 @@
+<!--pages/index/buypage/buypage.wxml-->
+<view class='addressBar' bindtap='toAddress'>
+  <view class='left'>
+    <view>
+      <image src='../../images/user/map@2x.png' style='width:21rpx;height:26rpx;verticle-align:middle;'></image>
+      <text wx:if="{{addressInfo}}">{{addressInfo.userName}}</text>
+      <text wx:if="{{!addressInfo}}">请填写收货地址</text>
+      <text class='phoneNum'>{{addressInfo.telNumber}}</text>
+    </view>
+    <view class='address' wx:if="{{addressInfo}}">
+      <text>{{addressInfo.provinceName}}{{addressInfo.cityName}}{{addressInfo.countyName}}{{addressInfo.detailInfo}}</text>
+    </view>
+  </view>
+  <view class='right'>
+    <image src='../../images/user/next@2x.png' style='width:18rpx;height:34rpx;'></image>
+  </view>
+</view>
+<view class='orderInfo'>
+  <view class='goodsInfo1'>
+    <image src='{{goodsToBuy.coverUrl}}' class='userLogo'></image>
+    <view class='right'>
+      <view class='goodsName'>{{goodsToBuy.name}}</view>
+      <view class='price'>¥{{priceNow}}</view>
+    </view>
+  </view>
+  <view class='format' wx:for="{{format}}" wx:key="*id" wx:for-index="index1" wx:for-item="formatItem">
+    <view class='text'>{{formatItem.name}}：</view>
+    <view wx:for="{{formatItem.values}}" wx:for-item="valueItem" wx:key="*id" wx:for-index="index2" style="background:{{valueItem == formatSelected[index1] ? '#8050eb' :'#666'}}" class='tips' bindtap='changeFormat' data-name='{{formatItem.name}}' data-value='{{valueItem}}'>{{valueItem}}</view>
+  </view>
+  <view class='number'>
+    <view>数量：</view>
+    <view class='minus' bindtap='minusNum'>
+      <text style="background: {{orderNum > 1 ? '#c846f2' : '#666'}}"></text>
+    </view>
+    <view class='num'>
+      <text>{{orderNum}}</text>
+    </view>
+    <view class='add' bindtap='addNum'>
+      <text></text>
+    </view>
+  </view>
+</view>
+<view class='bottomBtn'>
+  <view class='order'>
+    <view class='price'>应付总额：
+      <text>¥{{orderPrice}}</text>
+    </view>
+    <view class='num'>共{{orderNum}}件商品</view>
+  </view>
+  <view class='submitBtn' bindtap='submitOrder'>提交订单</view>
+</view>
+<view class='hoverView' wx:if="{{warningShow}}">
+  <view class='warning'>
+    <image src='../../images/index/question@2x.png' style='width:52rpx;height:52rpx;'></image>
+    <view>{{waringWord}}</view>
+  </view>
+</view>

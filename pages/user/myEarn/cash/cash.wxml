@@ -1,0 +1,18 @@
+<!--pages/user/myEarn/cash/cash.wxml-->
+<view class='cashInput'>
+  <text>提现金额：</text>
+  <view class='center'>
+    <input type='number' bindinput='listenInput'></input>
+    <view class='balance'>余额{{earn || 0}}元</view>
+  </view>
+  <text class='last'>元</text>
+</view>
+<view class='warning'>*单次提取不超过1000,00元</view>
+<button class='withdrawCash' bindtap='submitCash'>确认提现</button>
+
+<view class='hoverViewThis' wx:if="{{cashError}}">
+  <view class='warningView'>
+    <image src='../../../images/user/question@2x.png' style='width:52rpx;height:52rpx;'></image>
+    <view class='warningWord'>余额不足或填写错误，请重新填写</view>
+  </view>
+</view>

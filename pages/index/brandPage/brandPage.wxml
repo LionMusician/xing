@@ -1,0 +1,15 @@
+<!--pages/index/brandPage/brandPage.wxml-->
+<view class='brandList'>
+  <view class='brand' wx:for="{{brandList}}" wx:key="*id">
+    <view class='goodsInfo'>
+      <image class='goodsLogo' src='{{item.coverUrl}}'></image>
+      <view class='right'>
+        <view class='title'>{{item.name}}</view>
+        <view class='videoNum' bindtap='toGoodsVideo' data-goodsid='{{item.id}}'>共有{{item.videos.length}}个视频></view>
+      </view>
+    </view>
+    <view class='videoList'>
+      <image class='videoImage' wx:for="{{item.videos}}" wx:key="*id" wx:for-item="videoItem" src='{{videoItem.imageUrl}}'></image>
+    </view>
+  </view>
+</view>

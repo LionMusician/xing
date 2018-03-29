@@ -1,0 +1,44 @@
+<!--pages/user/otherUser/otherUser.wxml-->
+<view class="container">
+  <view class='userInfo'>
+    <image class='bgPic' src='http://mi4c.cn/imgs/me@2x.png' mode='widthFix'></image>
+    <view class='avatar'>
+      <image src='{{userInfo.avatarUrl}}' mode='aspectFit'></image>
+    </view>
+    <view class='userBtn'>
+      <view class='attention' bindtap='attention' wx:if="{{!userInfo.isFollow}}"><text>+</text>关注</view>
+      <view class='attention' bindtap='toMail' wx:if="{{userInfo.isFollow}}" data-mailid='{{userInfo.id}}'>私信Ta</view>
+    </view>
+    <view class='userName'>{{userInfoGet.name ||userInfo.nickName}}
+      <image src='../../images/user/man@2x.png' wx:if="{{userInfo.gender == 1}}"></image>
+      <image src='../../images/user/women@2x.png' wx:if="{{userInfo.gender == 0}}"></image>
+    </view>
+    <view class='userWord'>{{userInfoGet.said || '输了你就算赢了世界又如何！你又不懂我的真心！'}}</view>
+    <view class='friend'>
+      <view>
+        <text>{{userInfoGet.activityData.followerCount || 0}} </text>关注
+      </view>
+      <view class='fans'>
+        <text>{{userInfoGet.activityData.fanCount || 0}} </text>粉丝
+      </view>
+      <view>
+        <text>{{userInfoGet.activityData.praiseCount || 0}} </text>赞
+      </view>
+    </view>
+  </view>
+  <view class='videos'>
+    <view class='nav'>
+      <view class='navTip' bindtap='showMyVideo' style='background:{{showMyVideoBgColor}};color:{{showMyVideoColor}}'>Ta的视频</view>
+      <view class='navTip' bindtap='showMylove' style='background:{{showMyloveBgColor}};color:{{showMyloveColor}}'>喜欢</view>
+    </view>
+    <view class='videoList'>
+      <view class='tips' wx:for="{{videoList}}" wx:key="*id" wx:if="{{videoListShow}}">
+        <image src='{{item.imageUrl}}' bindtap='showVideo' data-videourl='{{item.videoUrl}}'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<video src='{{playVideoUrl}}' duration='1' controls='' muted='true' autoplay='true' loop='true' show-center-play-btn='' show-fullscreen-btn='' show-play-btn='' objectFit='fill' class='playVideo' hidden='{{!playVideoUrl}}'>
+  <cover-image src='../../images/shot/close@2x.png' bindtap='hideVideo'></cover-image>
+</video> 

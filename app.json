@@ -1,0 +1,57 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/goodsVideo/goodsVideo",
+    "pages/index/brandPage/brandPage",
+    "pages/index/goodsInfo/goodsInfo",
+    "pages/index/search/search",
+    "pages/index/buypage/buypage",
+    "pages/index/buypage/address/address",
+    "pages/shot/shot",
+    "pages/shot/black/black",
+    "pages/shot/shotVideo/shotVideo",
+    "pages/user/user",
+    "pages/user/set/set",
+    "pages/user/editVideo/editVideo",
+    "pages/user/mail/mail",
+    "pages/user/mail/privateLetter/privateLetter",
+    "pages/user/userinfo/userinfo",
+    "pages/user/userlist/userlist",
+    "pages/user/otherUser/otherUser",
+    "pages/user/secret/secret",
+    "pages/user/secret/whocansend/whocansend",
+    "pages/user/secret/blacklist/blacklist",
+    "pages/user/myEarn/myEarn",
+    "pages/user/myEarn/cash/cash",
+    "pages/user/myOrder/myOrder",
+    "pages/user/myOrder/orderInfo/orderInfo",
+    "pages/user/myOrder/logistics/logistics",
+    "pages/courier/courier"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#141823",
+    "navigationBarTitleText": "猩次元",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#1A1D26"
+  },
+  "tabBar": {
+    "backgroundColor": "#141823",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "",
+        "iconPath": "pages/images/tabBar/shouye@2x.png",
+        "selectedIconPath": "pages/images/tabBar/shouye-w@2x.png"
+      },{
+        "pagePath": "pages/shot/black/black",
+        "text": "",
+        "iconPath": "pages/images/tabBar/add@2x.png",
+        "selectedIconPath": "pages/images/tabBar/add@2x.png"
+      },{
+        "pagePath": "pages/user/user",
+        "text": "",
+        "iconPath": "pages/images/tabBar/me-b@2x.png",
+        "selectedIconPath": "pages/images/tabBar/me@2x.png"
+      }]
+  }
+}

@@ -1,0 +1,16 @@
+/* pages/user/mail/privateLetter/privateLetter.wxss */
+.chatList{width: 100%;margin-bottom: 130rpx;margin-top: 20rpx;}
+.chatList .chatTip{width: 100%;margin-top: 40rpx;}
+.chatList .chatTip .time{font-size: 22rpx;color: #999;text-align: center;margin-bottom: 40rpx;}
+.chatList .chatTip .wordList{width: 730rpx;margin: 0 auto;margin-bottom: 30rpx;display: flex;flex-direction: row;}
+.chatList .chatTip .me{flex-direction: row-reverse;}
+.chatList .chatTip .wordList .userLogo{width: 68rpx;height: 68rpx;border-radius: 10rpx;background: red;margin: 0 20rpx;display: inline-block;}
+.chatList .chatTip .wordList .bubble{background: #fff;font-size: 28rpx;line-height: 34rpx;max-width: 500rpx;border-radius: 10rpx;display: inline-block;padding: 17rpx;color: #333;position: relative;}
+.chatList .chatTip .wordList .bubble::after{content: '';display: block;position: absolute;border: 10rpx solid transparent;border-right-color: #fff;top: 24rpx;left: -20rpx;}
+.chatList .chatTip .me .bubble{background: #8050eb;color: #fff;}
+.chatList .chatTip .me .bubble::after{display: none;}
+.chatList .chatTip .me .bubble::before{border: 10rpx solid transparent;content: '';display: block;position: absolute;border-left-color: #8050eb;top: 24rpx;right: -20rpx;}
+
+.inputView{width: 100%;height: 100rpx;position: fixed;background: #151822;bottom: 0;left: 0;z-index: 2;text-align: center;padding: 13rpx 0;}
+.inputView input{width: 540rpx;display: inline-block;height: 74rpx;margin-right: 14rpx;border-radius: 10rpx;color: #999;padding: 0 24rpx;background: #fff;text-align: left;box-sizing: border-box;line-height: 74rpx;font-size: 28rpx;}
+.inputView button{width: 140rpx;height: 74rpx;text-align: center;line-height: 74rpx;background: #8b40eb;border-radius: 10rpx;display: inline-block;color: #fff;margin: 0;font-size: 28rpx;}

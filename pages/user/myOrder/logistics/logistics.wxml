@@ -1,0 +1,38 @@
+<!--pages/user/myOrder/logistics/logistics.wxml-->
+<view class='orderList'>
+  <view class='order'>
+    <view class='orderInfo' bindtap='toOrderInfo'>
+      <view class='goodsLogo'>
+        <image src=''></image>
+      </view>
+      <view class='goodsInfo'>
+        <view class='top'>
+          <view class='title'>阿迪达斯滑板多色可选2018年新款滑板</view>
+          <view class='price'>¥299</view>
+        </view>
+        <view class='bottom'>
+          <view class='logisticsNum'>韵达快递：3934382924815</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='logistics'>
+  <view class='address'>
+    <image src='../../../images/user/map@2x.png' style='width:24rpx;height:26rpx;'></image>
+    <view>收货地址：上海市黄浦区延安东路22号外滩中心18楼1817</view>
+  </view>
+  <view class='logisticsInfo'>
+    <view class='trance' wx:for='{{traces}}' wx:key="*this">
+      <view class='left'>
+        <view class='date'>{{item.AcceptDate}}</view>
+        <view class='time'>{{item.AcceptTime}}</view>
+      </view>
+      <view class='right'>
+        <view class='circle'></view>
+        <view class='state'>派件中</view>
+        <view class='info'>{{item.AcceptStation}}</view>
+      </view>
+    </view>
+  </view>
+</view>

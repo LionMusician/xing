@@ -1,0 +1,14 @@
+/* pages/user/mail/mail.wxss */
+.noUser{display: flex;flex-direction: column;justify-content: center;width: 100%;}
+.noUser image{width: 80rpx;height: 80rpx;margin: 188rpx auto 50rpx;}
+.noUser view{font-size: 28rpx;color: #999;text-align: center;}
+.mailList{width: 100%;margin-top: 30rpx;}
+.mailList .tip{width: 730rpx;margin: 0 auto 12rpx;border-radius: 20rpx;background: #21212b;display: flex;flex-direction: row;}
+.mailList .tip .userLogo{margin: 20rpx;}
+.mailList .tip .userLogo image{width: 80rpx;height: 80rpx;border-radius: 20rpx;background: red;}
+.mailList .tip .content{margin: 26rpx 20rpx 26rpx 0;display: flex;flex-direction: column;color: #999;font-size: 24rpx;width: 100%;}
+.mailList .tip .content .top{display: flex;flex-direction: row;justify-content: space-between;}
+.mailList .tip .content .top .userName{color: #fff;font-size: 30rpx;}
+.mailList .tip .content .bottom{display: flex;flex-direction: row;justify-content: space-between;margin-top: 14rpx;}
+.mailList .tip .content .bottom .dialogue{font-size: 26rpx;line-height: 30rpx;}
+.mailList .tip .content .bottom .num{color: #fff;background: #e36159;border-radius: 8rpx;width: 30rpx;height: 30rpx;text-align: center;line-height: 30rpx;}

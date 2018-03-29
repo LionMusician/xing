@@ -1,0 +1,19 @@
+<!--pages/user/userlist/userlist.wxml-->
+ <view class='noUser' wx:if="{{userListCount == 0}}">
+  <image src='../../images/user/no@2x.png'></image>
+  <view wx:if="{{userListTitle == '粉丝'}}">您还没有任何粉丝哦~</view>
+  <view wx:if="{{userListTitle == '关注'}}">还没有人关注您哦~</view>
+  <view wx:if="{{userListTitle == '赞'}}">还没有人赞您哦~</view>
+</view> 
+ <view class='userList' wx:for = "{{userList}}" wx:key="*id">
+  <view class='userView' bindtap='toOtherUser' data-userid='{{item.id}}'>
+    <view class='left'>
+      <image src='{{item.avatarUrl}}'></image>
+      <view class='user'>
+        <view class='userName'>{{item.nickName}}</view>
+        <view class='fans'>粉丝：{{item.activityData.fanCount || 0}}</view>
+      </view>
+    </view>
+    <view class='right'>{{item.activityData.workCount || 0}}个作品</view>
+  </view>
+</view>

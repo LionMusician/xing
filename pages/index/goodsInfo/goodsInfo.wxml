@@ -1,0 +1,35 @@
+<!--pages/index/goodsInfo/goodsInfo.wxml-->
+<image src='{{goodsInfo.imageUrl}}' mode='fill' class='bgImage'></image>
+<view class='goodsView'>
+    <view class='goods showGoodsView'>
+      <image class='closeBtn' src='../../images/shot/close@2x.png' bindtap='closeBuyUrl'></image>
+      <view bindtouchstart='touchStart' bindtouchmove='touchMove' bindtouchend='showGoodsInfo' style='height:220rpx;'>
+        <image mode='aspectFit' src='{{goodsView.goodsUrlTarget.coverUrl}}'></image>
+        <view class='title'>
+          <view class='goodsName'>{{goodsView.goodsUrlTarget.name}}</view>
+          <view class='price'>¥{{goodsView.unitPrice}}</view>
+        </view>
+      </view>
+      <view class='buyBtn' bindtap='toBuyPage'>立即购买</view>
+    </view>
+    <view class='showGoodsView goodsInfoClass' wx:if="{{goodsView.showGoodsInfo}}" style='height:{{goodsView.goodsInfoHeightNow}}rpx'>
+      <image class='closeBtn' src='../../images/shot/close@2x.png' bindtap='closeGoodsInfo'></image>
+      <view class='title'>商品详情</view>
+      <view class='scrollView'>
+        <image mode='aspectFit' class='goodsBigPic' src='{{goodsView.goodsUrlTarget.coverUrl}}'></image>
+        <view class='goodsName'>{{goodsView.goodsUrlTarget.name}}</view>
+        <view class='price'><view class='text'>价格：¥</view>{{goodsView.goodsUrlTarget.skus[0].salesPrice}}</view>
+        <view class='colorfulTitle'>颜色展示</view>
+        <view class='colorfulPics'>
+          <view class='picBox' wx:for="{{goodsView.goodsUrlTarget.imageUrls}}" wx:key="*id">
+            <image mode='aspectFit' src='{{item}}' mode='widthFix'></image>
+            <view class='picTitle'>/{{item.color}}/</view>
+          </view>
+        </view>
+      </view>
+      <view class='bottom'>
+        <view class='button toShotPage' style='width:{{goodsView.toShotPageWidth}}rpx' bindtap='toShotVideo'>拍这个</view>
+        <view class='button toBuyPage' style='width:{{goodsView.toBuyPageWidth}}rpx' bindtap='toBuyPage'>立即购买</view>
+      </view>
+    </view>
+  </view>

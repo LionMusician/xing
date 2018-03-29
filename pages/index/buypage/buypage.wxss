@@ -1,0 +1,32 @@
+/* pages/index/buypage/buypage.wxss */
+.addressBar{width: 730rpx;border-radius: 20rpx;display: flex;flex-direction: row;justify-content: space-between;background: #21212b;margin: 30rpx auto 20rpx;align-items: center;padding: 34rpx 20rpx;}
+.addressBar image{margin: 0;vertical-align: middle;}
+.addressBar view{line-height: 34rpx;}
+.addressBar .left .address{margin-left: 41rpx;}
+.addressBar .left image{margin-right: 20rpx;}
+.addressBar text{font-size: 28rpx;display: inline-block;}
+.addressBar text.phoneNum{margin-left: 56rpx;}
+.orderInfo{width: 730rpx;border-radius: 20rpx;margin: 0 auto;padding: 30rpx 20rpx;background: #21212b;display: block;}
+.orderInfo text{font-size: 30rpx;}
+.goodsInfo1{display: flex;flex-direction: row;margin: 0 0 60rpx;}
+.userLogo{width: 140rpx;height: 140rpx;background: red;margin-right: 20rpx;border-radius: 20rpx;}
+.goodsInfo1 .right{width: 500rpx;}
+.goodsInfo1 .goodsName{font-size: 30rpx;line-height: 34rpx;margin: 10rpx 0 30rpx;}
+.goodsInfo1 .price{font-size: 30rpx;color: #e36159;}
+ .format{line-height: 80rpx;} 
+.format view{display: inline-block;}
+.format .text{font-size: 30rpx;height: 30rpx;line-height: 80rpx;vertical-align: top;}
+.format .tips{margin-right: 30rpx;border-radius: 10rpx;background: #666;font-size: 26rpx;height: 50rpx;line-height: 50rpx;padding: 0 20rpx;}
+.number{margin: 50rpx 0;font-size: 30rpx;}
+.number view{display: inline-block;}
+.number .minus,.number .add{width: 30rpx;height: 30rpx;vertical-align: middle;margin: -10rpx 30rpx;position: relative;padding: 10rpx;box-sizing: content-box;}
+.number .minus text,.number .add text{width: 30rpx;height: 6rpx;background: #c846f2;position: absolute;top: 22rpx;left: 10rpx;}
+.number .add text::after{content: '';display: block;position: absolute;width: 6rpx;height: 30rpx;background: #c846f2;top: -12rpx;left: 12rpx;}
+.bottomBtn{width: 100%;height: 120rpx;position: fixed;bottom: 0;left: 0;background: #21212b;z-index: 3;display: flex;flex-direction: row;justify-content: flex-end;font-size: 30rpx;}
+.bottomBtn .order{width: 60%;text-align: right;padding: 10rpx 20rpx;}
+.bottomBtn .order view{line-height: 50rpx;height: 50rpx;}
+.bottomBtn .order .price text{color: #e36159;}
+.bottomBtn .submitBtn{width: 40%;background: #8050eb;line-height: 120rpx;text-align: center;}
+.warning{width: 360rpx;height: 160rpx;background: rgba(255,255,255,.94);border-radius: 10rpx;position: fixed;top: 50%;left: 50%;margin-top: -180rpx;margin-left: -180rpx;display: flex;flex-direction: column;justify-content: center;align-items: center;}
+.warning image{margin-bottom: 20rpx;}
+.warning view{color: #333;font-size: 30rpx;text-align: center;}

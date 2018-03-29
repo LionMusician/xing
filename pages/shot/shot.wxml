@@ -1,0 +1,38 @@
+<!--pages/shot/shot.wxml-->
+<import src="../../template/tabBar.wxml" />  
+<!-- <template is="tabBar" data="{{tabBar: tabBar}}" />  -->
+<view class='container'>
+  <template is="searchBar" data="{{searchBar: searchBar}}" />
+  <view class='goodsList'>
+    <view class='goods' wx:for="{{goodsList}}" wx:key="*id" bindtap='showBuyUrl' data-goods='{{item}}'>
+      <image src='{{item.coverUrl}}' mode='aspectFit'></image>
+      <view class='title'>{{item.name}}</view>
+    </view>
+  </view>
+  <view class='goods showGoodsView' wx:if="{{showBuyUrl}}">
+    <image mode='aspectFit' class='closeBtn' src='../images/shot/close@2x.png' bindtap='closeBuyUrl'></image>
+    <image src='{{goodsUrlTarget.coverUrl}}' mode='aspectFit'></image>
+    <view class='title' bindtap='showGoodsInfo'>
+      <view>{{goodsUrlTarget.name}}</view>
+      <view class='price'>¥{{goodsUrlTarget.skus[0].salesPrice}}</view>
+    </view>
+    <view class='buyBtn'>立即购买</view>
+  </view>
+  <view class='showGoodsView goodsInfoClass' wx:if="{{showGoodsInfo}}">
+    <image class='closeBtn' src='../images/shot/close@2x.png' bindtap='closeGoodsInfo' mode='aspectFit'></image>
+    <view class='title'>商品详情</view>
+    <view class='scrollView'>
+      <image class='goodsBigPic' src='{{goodsUrlTarget.coverUrl}}' mode='aspectFit'></image>
+      <view class='goodsName'>{{goodsUrlTarget.name}}</view>
+      <view class='price'><text>价格：</text>¥{{goodsUrlTarget.skus[0].salesPrice}}</view>
+      <view class='colorfulTitle'>颜色展示</view>
+      <view class='colorfulPics'>
+        <view class='picBox' wx:for="{{goodsUrlTarget.imageUrls}}" wx:key="*id">
+          <image src='{{item}}' mode='aspectFit'></image>
+          <view class='picTitle'>/{{item.color}}/</view>
+        </view>
+      </view>
+    </view>
+    <view class='chooseToShot' bindtap='toShotVideo'>拍这个</view>
+  </view>
+</view>

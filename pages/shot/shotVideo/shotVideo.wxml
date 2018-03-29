@@ -1,0 +1,49 @@
+<!--pages/shot/shotVideo/shotVideo.wxml-->
+  <camera style='width:100%;height:100%;' wx:if="{{cameraShow}}" id='myCamera'>
+  <cover-view class='progressBarBottom'>
+    <cover-view class='progressBarTop' style='width:{{progressWidth}}rpx' animation = "{{animationData}}"></cover-view>
+  </cover-view>
+  <cover-view class='btn leftBtn' wx:if="{{progressWidth == 0 && recordPause}}" bindtap='toShot'>
+    <cover-image src='../../images/shot/addting@2x.png' style='width:48rpx;height:42rpx;'></cover-image>
+    <cover-view>添加商品</cover-view>
+  </cover-view>
+  <cover-view class="recordBtn" bindtap='startRecord' wx:if="{{recordPause}}">
+    <cover-view class="recordBtnText">{{progressWidth == 0 ? '按住拍' : '重新拍'}}      </cover-view>
+  </cover-view>
+  <cover-view class="recordBtnAfter" bindtap='endRecord' wx:if="{{!recordPause}}">
+    <cover-view class="recordBtnIn"></cover-view>
+  </cover-view>
+  <cover-view class='btn rightBtn' wx:if="{{progressWidth == 0 && recordPause}}"  bindtap='chooseLocalVideo'>
+    <cover-image src='../../images/shot/up@2x.png' style='width:55rpx;height:42rpx;'></cover-image>
+    <cover-view>上传视频</cover-view>
+  </cover-view>
+</camera>
+<video style='width:100%;height:100%' src='{{localVideoUrl}}' wx:if="{{videoShow}}" controls='false' autoplay='true' loop='true' show-center-play-btn='false' show-play-btn='false'>
+  <cover-view class='toNextPage' bindtap='showScreenShot'>下一步</cover-view>
+  <cover-view class="recordBtn" bindtap='startRecord' wx:if="{{recordPause}}">
+    <cover-view class="recordBtnText">{{progressWidth == 0 ? '按住拍' : '重新拍'}}      </cover-view>
+  </cover-view>
+</video>
+<view class='hoverView' wx:if="{{screenShotShow}}">
+  <image src='{{localImageUrl}}' class='screenImage' mode='aspectFit'></image>
+  <view class='operationView'>
+    <view class='bottomBtns'>
+      <view class='btn leftBtn' bindtap='submitVideo' data-status='DRAFT'>
+        <image src='../../images/shot/cun@2x.png' style='width:40rpx;height:40rpx;'></image>
+        <text>保存为草稿</text>
+      </view>
+      <view class='btn rightBtn' bindtap='submitVideo' data-status='AUDITING'>
+        <image src='../../images/shot/fasong@2x.png' style='width:38rpx;height:38rpx;'></image>
+        <text>发布</text>
+      </view>
+    </view>
+    <view class='videoInfoInput'>
+      <input class='goodsDesc' placeholder='输入想说的话···' placeholder-class='goodsDesc'></input>
+      <!-- <input class='goodsName' placeholder='添加商品名称' placeholder-class='goodsName' style='padding-left:{{goodsIconShow && 44}}rpx;' bindfocus='hideGoodsIcon' bindblur='showGoodsIcon' bindinput='listenVideoName'>
+      </input> -->
+      <view class='goodsName' bindtap='toShot'>{{videoNameToRecord || '添加商品名称'}}</view>
+       <image class='goodsIcon' src='../../images/shot/name@2x.png' wx:if="goodsIconShow"></image> 
+    </view>
+  </view>
+</view>
+  <!-- <button bindtap='submitVideo'>上传</button>   -->

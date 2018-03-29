@@ -1,0 +1,4 @@
+/* pages/index/buypage/address/address.wxss */
+.cells{font-size: 30rpx;}
+.cell input{display: inline-block;height: 72rpx;line-height: 72rpx;vertical-align: middle;}
+.bottomBtn{height: 100rpx;position: fixed;z-index: 3;bottom: 0;width: 100%;text-align: center;line-height: 100rpx;background: #8050eb;font-size: 30rpx;}

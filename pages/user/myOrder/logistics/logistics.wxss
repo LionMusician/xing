@@ -1,0 +1,16 @@
+/* pages/user/myOrder/logistics/logistics.wxss */
+.orderList{border-bottom: 2rpx solid #272734;}
+.orderList .order{width: 100%;margin: 0;border-radius: 0;background: transparent;}
+.logisticsNum{font-size: 28rpx;color: #cdcdcd;}
+.logistics{width: 100%;}
+.address{display: flex;flex-direction: row;justify-content: flex-start;margin: 40rpx 40rpx 50rpx 100rpx;}
+.address image{margin-right: 20rpx;vertical-align: middle;}
+.address view{line-height: 36rpx;font-size: 28rpx;color: #cdcdcd;}
+.trance{display: flex;flex-direction: row;justify-content: flex-start;color: #999;}
+.trance .left{width: 140rpx;text-align: right;margin-right: 20rpx;}
+.trance .left .date{font-size: 26rpx;margin-bottom: 12rpx;line-height: 40rpx;}
+.trance .left .time{font-size: 18rpx;}
+.trance .right{width: 500rpx;text-align: left;padding-left: 20rpx;border-left: 2rpx solid #999;position: relative;}
+.trance .right .circle{width: 24rpx;height: 24rpx;border-radius: 50%;background: #999;position: absolute;top: 0;left: -12rpx;}
+.trance .right .state{font-size: 28rpx;margin-bottom: 20rpx;line-height: 28rpx;}
+.trance .right .info{font-size: 24rpx;line-height: 28rpx;padding-bottom: 80rpx;}

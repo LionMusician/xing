@@ -1,0 +1,8 @@
+/* pages/user/editVideo/editVideo.wxss */
+@import "../../index/index.wxss";
+.shareView{height: 300rpx;background: #eee;}
+.shareView .list{margin-top: 80rpx;white-space: pre-wrap;display: block;}
+.shareView .list .tip{width: 140rpx;text-align: center;margin-right: 65rpx;white-space: pre-wrap;display: flex;flex-direction: column;justify-content: flex-start;align-items: center;float: left;}
+.shareView .list .tip .bgWhite{background: #fff;border-radius: 10rpx;width: 110rpx;height: 110rpx;line-height: 110rpx;text-align: center;white-space: pre-wrap;margin-bottom: 20rpx;}
+.shareView .list .tip .bgWhite cover-image{display: inline-block;vertical-align: middle;margin: 0;}
+.shareView .list .tip .bgWhite .text{white-space: normal;font-size: 26rpx;color: #666;}

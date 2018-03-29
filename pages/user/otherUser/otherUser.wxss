@@ -1,0 +1,8 @@
+/* pages/user/otherUser/otherUser.wxss */
+@import "../user.wxss";
+.userInfo{height: 420rpx;}
+.attention{width: 120rpx;height: 52rpx;border-radius: 10rpx;background: #e36159;font-size: 28rpx;line-height: 52rpx;margin-right: 30rpx;}
+.attention text{display: inline-blockl;margin-right: 12rpx;}
+.videos{background: #1A1D26;margin-top: 0;}
+.playVideo{width:100%;height:100%;position:absolute;top:0;left:0;}
+.playVideo cover-image{width: 24rpx;height: 24rpx;padding: 10rpx;position: absolute;top: 10rpx;right: 10rpx;}

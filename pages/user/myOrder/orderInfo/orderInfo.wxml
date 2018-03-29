@@ -1,0 +1,53 @@
+<!--pages/user/myOrder/orderInfo/orderInfo.wxml-->
+<view class='takeOverInfo'>
+  <view class='orderInfo'>
+    <view class='goodsLogo'>
+      <image src='{{orderInfo.items[0].imageUrl}}'></image>
+    </view>
+    <view class='goodsInfo'>
+      <view class='top'>
+        <view class='title'>{{orderInfo.items[0].title}}</view>
+        <view class='price'>¥{{orderInfo.items[0].totalPrice/100}}</view>
+      </view>
+      <view class='bottom'>
+        <view class='model'>{{orderInfo.items[0].facetJson}}</view>
+        <view class='num'>×{{orderInfo.items[0].quantity}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='ownerInfo'>
+    <view class='contact'>
+      <view class='userName'>
+        <image src='../../../images/user/ren@2x.png' style='width:24rpx;height:28rpx;'></image>
+        <text>收货人：{{orderInfo.shipTO.linkman}}</text>
+      </view>
+      <view class='tel'>{{orderInfo.shipTO.phone}}</view>
+    </view>
+    <view class='address'>
+      <image src='../../../images/user/map@2x.png' style='width:24rpx;height:26rpx;margin:'></image>
+      <view>收货地址：{{orderInfo.shipTO.provice}}{{orderInfo.shipTO.city}}{{orderInfo.shipTO.district}}{{orderInfo.shipTO.detail}}</view>
+    </view>
+  </view>
+</view>
+<view class='businessInfo'>
+  <view>商家电话：{{orderInfo.store.phone}}</view>
+  <view>商家地址：{{orderInfo.store.address.provice}}{{orderInfo.store.address.city}}{{orderInfo.store.address.district}}{{orderInfo.store.address.detail}}</view>
+  <view>订单编号：{{orderInfo.id}}</view>
+  <view>交易时间：{{orderInfo.store.creationTime}}</view>
+</view>
+<view class='orderState'>
+  <view class='shipped'>
+    <text class='toLogistics'>查看物流</text>
+    <text class='takeOver' bindtap='showDeliveryModal'>确认收货</text>
+  </view>
+</view>
+
+<view class='hoverView' wx:if="{{deliveryModal}}" bindtap='hideDeliveryModal'>
+  <view class='deliveryModal'>
+    <view class='title'>确认收货吗？</view>
+    <view class='operation'>
+      <button class='cancelBtn'>取消</button>
+      <button class='confirmBtn' bindtap='confirmDelivery'>确认</button>
+    </view>
+  </view>
+</view>

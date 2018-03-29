@@ -1,0 +1,7 @@
+/* pages/index/brandPage/brandPage.wxss */
+.goodsInfo{display: flex;width: 100%;}
+.goodsInfo image{width: 140rpx;height: 140rpx;border-radius: 10rpx;margin: 30rpx 20rpx 30rpx 30rpx;}
+.goodsInfo .right{width: 530rpx;margin-top: 30rpx;display: flex;flex-flow: column;justify-content: space-between;}
+.goodsInfo .right .title{font-size: 30rpx;line-height: 38rpx;margin-top: 8rpx;}
+.goodsInfo .right .videoNum{font-size: 26rpx;color: #999;text-align: right;padding: 30rpx;}
+.videoImage{width: 250rpx;height: 320rpx;background: red;}

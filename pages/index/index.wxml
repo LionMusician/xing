@@ -1,0 +1,98 @@
+<!--index.wxml-->
+<import src="../../template/tabBar.wxml" />
+<!-- <template is="tabBar" data="{{tabBar: tabBar}}" wx:if="{{!goodsView.show}}" /> -->
+<template is="goodsView" data="{{goodsView: goodsView}}" wx:if="{{goodsView.show}}"/>
+  <!-- <template is="goodsView" data="{{goodsView: goodsView}}" /> -->
+<view class="container">
+  <video id='indexVideo' src="{{goodsItem.videoUrl}}" style='width:100%;height:100%;'controls='' autoplay='true' loop='true' show-center-play-btn='' show-play-btn='' show-fullscreen-btn='' objectFit='fill' wx:if="{{!videoHide}}" bindtap='videoPause'>
+    <cover-view class="controlView " style="display:{{videoPause}};left:{{videoPause=='none' ? '-1000rpx' : '150rpx'}}" animation="{{animationData}}">
+      <cover-view class='son'>
+        <cover-image src='../images/index/up.png' bindtap='lastVideo'></cover-image>
+      </cover-view>
+      <cover-view class='son'>
+        <cover-image src='../images/index/left.png' bindtap='brotherLast'></cover-image>
+        <cover-image src='../images/index/play.png' style='width:96rpx;height:96rpx;' bindtap='playVideo'></cover-image>
+        <cover-image src='../images/index/right.png' bindtap='brotherNext'></cover-image>
+      </cover-view>
+      <cover-view class='son'>
+        <cover-image src='../images/index/down.png' bindtap='nextVideo'></cover-image>
+      </cover-view>
+    </cover-view>
+    <cover-view class='searchBtn'>
+      <cover-image src='../images/index/search.png' bindtap='toSearch'></cover-image>
+    </cover-view>
+    <cover-view class='funBtns'>
+      <cover-view class="tip" bindtap='follow' data-videoId='{{goodsItem.id}}' data-isPraise='{{goodsItem.isPraise}}' data-videouserid='{{goodsItem.user.id}}'>
+        <cover-image src='{{goodsItem.isPraise ? "../images/index/red-zan@2x.png" : "../images/index/zzzzz@2x.png"}}' style='width:65rpx;height:57rpx;'></cover-image>
+        <cover-view class='text'>{{goodsItem.praiseCount || 0}}</cover-view>
+      </cover-view>
+      <cover-view class="tip" bindtap='showComment' data-videoId='{{goodsItem.id}}' data-userid='{{goodsItem.user.id}}'>
+        <cover-image src='../images/index/xiaoxi@2x.png' style='width:62rpx;height:60rpx;'></cover-image>
+        <cover-view class='text' >{{goodsItem.commentCount || 0}}</cover-view>
+      </cover-view>
+      <cover-view class="tip" bindtap='showShare'>
+        <cover-image src='../images/index/fenxiang@2x.png' style='width:62rpx;height:62rpx;'></cover-image>
+        <cover-view class='text'>{{goodsItem.forwardCount || 0}}</cover-view>
+      </cover-view>
+    </cover-view>
+    <cover-view class='videoInfo'>
+      <cover-view class='userLogo'>
+        <cover-image src='{{goodsItem.user.avatarUrl}}' class='userPic' bindtap='toOtherUser' data-userid='{{goodsItem.user.id}}'></cover-image>
+        <cover-view class='text'>{{goodsItem.user.nickName}}</cover-view>
+        <cover-image src='../images/index/guanzhu@2x.png' class='follow'></cover-image>
+      </cover-view>
+      <cover-view class='brandName' bindtap='showGoodsView' data-id='{{goodsItem.id}}'>{{goodsItem.product.name}}</cover-view>
+    </cover-view>
+  </video>
+  <cover-view class='hoverView' wx:if="{{shareViewShow}}">
+    <cover-view class='shareView'>
+      <cover-view class='top'>分享至</cover-view>
+      <cover-view class='list'>
+        <cover-view class='weixin tip'>
+          <cover-image src='../images/index/weixin@2x.png'></cover-image>
+          <cover-view class='text'>微信好友</cover-view>
+        </cover-view>
+        <cover-view class='friends tip'>
+          <cover-image src='../images/index/pengyou@2x.png'></cover-image>
+          <cover-view class='text'>朋友圈</cover-view>
+        </cover-view>
+        <cover-view class='qq tip'>
+          <cover-image src='../images/index/QQ@2x.png'></cover-image>
+          <cover-view class='text'>QQ</cover-view>
+        </cover-view>
+      </cover-view>
+      <cover-image class='closeBtn' src='../images/shot/close@2x.png' bindtap='closeShareView'></cover-image>
+    </cover-view>
+  </cover-view>
+  <view class='hoverView' wx:if="{{commentViewShow}}">
+    <image src='' class='bgImages' mode='fill'></image>
+    <view class='shareView commentView'>
+      <view class='top'>共有{{commentsCount || 0}}条评论</view>
+      <view class='list'>
+        <view class='noComments' wx:if="{{!commentsCount}}">
+          <image src='../images/user/no@2x.png'></image>
+          <view>暂时还没有评论哦~</view>
+        </view>
+        <view class='tip' wx:for="{{commentsArr}}" wx:key="*id">
+          <image class='userLogo' src='{{item.creator.avatarUrl}}'></image>
+          <view class='commentBox'>
+            <view class='comment'>
+              <view class='userName'>{{item.creator.nickName}}</view>
+              <view class='content'>{{item.comment}}</view>
+              <view class='time'>{{item.creationTime}}</view>
+            </view>
+            <view class='heart' bindtap='commentFollow' data-id='{{item.id}}' data-status='{{item.isPraise}}'>
+              <image src="{{item.isPraise ? '../images/index/zan@2x.png' :'../images/index/zan-black@2x.png'}}"></image>
+              <text style="color:item.isPraise ? '#e36159' : '#999'">{{item.praiseCount}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='bottom'>
+        <input placeholder='请发表您的评论' placeholder-style='font-size:30rpx;color:#999;' cursor-spacing='10' bindinput='listenCommentsInput'></input>
+        <button bindtap='submitComments'>发送</button>
+      </view>
+      <image class='closeBtn' src='../images/shot/close@2x.png' bindtap='closeCommentView'></image>
+    </view>
+  </view>
+</view>

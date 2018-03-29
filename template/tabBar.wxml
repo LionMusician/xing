@@ -1,0 +1,56 @@
+<template name="tabBar">  
+  <cover-view style='width:{{tabBar.width}};height:{{tabBar.height}};position:fixed;bottom:0;left:0;padding:{{tabBar.padding}};background:#141823;display:flex;z-index:100;'>
+    <cover-view style='flex:2;text-align:center;margin:auto;' bindtap='toIndex'>
+      <cover-image mode='aspectFit' src='{{tabBar.indexPic}}' style='width:48rpx;height:42rpx;vertical-align: middle;padding:30rpx 0rpx;margin:auto;'></cover-image>
+    </cover-view>
+    <cover-view style='flex:3;text-align:center;margin:auto;' bindtap='toShot'>
+      <cover-image mode='aspectFit' src='{{tabBar.addPic}}' style='width:72rpx;height:72rpx;vertical-align: middle;margin:auto;'></cover-image>
+    </cover-view>
+    <cover-view style='flex:2;text-align:center;margin:auto;' bindtap='toUser'>
+      <cover-image mode='aspectFit' src='{{tabBar.userPic}}' style='width:38rpx;height:43rpx;vertical-align: middle;padding:28rpx 0;margin:auto;'></cover-image>
+    </cover-view>
+  </cover-view>
+</template>
+
+<template name="goodsView">
+  <view class='goodsView'>
+    <view class='goods showGoodsView'>
+      <image class='closeBtn' src='../images/shot/close@2x.png' bindtap='closeBuyUrl'></image>
+      <view bindtouchstart='touchStart' bindtouchmove='touchMove' bindtouchend='showGoodsInfo' style='height:220rpx;'>
+        <image mode='aspectFit' src='{{goodsView.goodsUrlTarget.coverUrl}}'></image>
+        <view class='title'>
+          <view>{{goodsView.goodsUrlTarget.name}}</view>
+          <view class='price'>¥{{goodsView.unitPrice}}</view>
+        </view>
+      </view>
+      <view class='buyBtn' bindtap='toBuyPage'>立即购买</view>
+    </view>
+    <view class='showGoodsView goodsInfoClass' wx:if="{{goodsView.showGoodsInfo}}" style='height:{{goodsView.goodsInfoHeightNow}}rpx'>
+      <image class='closeBtn' src='../images/shot/close@2x.png' bindtap='closeGoodsInfo'></image>
+      <view class='title'>商品详情</view>
+      <view class='scrollView'>
+        <image mode='aspectFit' class='goodsBigPic' src='{{goodsView.goodsUrlTarget.coverUrl}}'></image>
+        <view class='goodsName'>{{goodsView.goodsUrlTarget.name}}</view>
+        <view class='price'><view class='text'>价格：¥</view>{{goodsView.goodsUrlTarget.skus[0].salesPrice}}</view>
+        <view class='colorfulTitle'>颜色展示</view>
+        <view class='colorfulPics'>
+          <view class='picBox' wx:for="{{goodsView.goodsUrlTarget.imageUrls}}" wx:key="*id">
+            <image mode='aspectFit' src='{{item}}' mode='widthFix'></image>
+            <view class='picTitle'>/{{item.color}}/</view>
+          </view>
+        </view>
+      </view>
+      <view class='bottom'>
+        <view class='button toShotPage' style='width:{{goodsView.toShotPageWidth}}rpx' bindtap='toShotVideo'>拍这个</view>
+        <view class='button toBuyPage' style='width:{{goodsView.toBuyPageWidth}}rpx' bindtap='toBuyPage'>立即购买</view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name="searchBar">
+  <view class='searchBar' style='width: 100%;display:flex;flex-direction:row;position:fixed;top:0;left:0;z-index:3;background:#1A1D26;box-sizing: content-box;height:130rpx;justify-content: center;'>
+    <input placeholder='搜索商品' placeholder-style='font-size:30rpx;color:#999;' style='width: 540rpx;height: 80rpx;border-radius: 40rpx;background: #3D3E48;padding: 0 30rpx;color: #fff;font-size: 30rpx;margin-top:30rpx;' bindinput='listenSearch' bindfocus='setFocus' bindblur='clearFocus'></input>
+    <text style='color: #fff;display: inline-block;height: 80rpx;line-height: 80rpx;font-size: 30rpx;margin-top:30rpx;padding:0 30rpx;' bindtap='searchBtn'>搜索</text>
+  </view>
+</template>

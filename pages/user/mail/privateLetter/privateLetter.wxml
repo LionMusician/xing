@@ -1,0 +1,14 @@
+<!--pages/user/mail/privateLetter/privateLetter.wxml-->
+<view class='chatList' >
+  <view class='chatTip' wx:for="{{commentsArr}}" wx:key="*id">
+    <view class='time'>{{item.creationTime}}</view>
+    <view class="wordList {{item.toUser.id == mailId ? 'me' : ''}}">
+      <image class='userLogo' src="{{item.fromUser.avatarUrl}}"></image>
+      <view class="bubble">{{item.content}}</view>
+    </view>
+  </view>
+</view>
+<view class='inputView'>
+  <input placeholder='输入内容' placeholder-style='color:#999' cursor-spacing='10' bindinput='listenInput' value='{{letterInput}}'></input>
+  <button bindtap='submitLetter'>发送</button>
+</view>

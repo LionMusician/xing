@@ -1,0 +1,142 @@
+<!--pages/user/myOrder/myOrder.wxml-->
+<view class="swiper-tab">
+    <view class="swiper-tab-list" data-current="0" bindtap="swichNav">
+      <text class=" {{currentTab==0 ? 'on' : ''}}">全部</text>
+    </view>
+    <view class="swiper-tab-list " data-current="1" bindtap="swichNav">
+      <text class="{{currentTab==1 ? 'on' : ''}}">待发货</text>
+    </view>  
+    <view class="swiper-tab-list " data-current="2" bindtap="swichNav">
+      <text class="{{currentTab==2 ? 'on' : ''}}">待收货</text>
+    </view>  
+    <view class="swiper-tab-list " data-current="3" bindtap="swichNav">
+      <text class="{{currentTab==3 ? 'on' : ''}}">已收货</text>
+    </view>  
+</view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight}}px;" bindchange="bindChange">
+    <swiper-item>
+      <view class='orderList' style="height:{{winHeight/3*orderList.length + 20}}px">
+        <view class='order' wx:for="{{orderList}}" wx:key="*id">
+          <view class='orderInfo' bindtap='toOrderInfo' data-id='{{item.id}}'>
+            <view class='goodsLogo'>
+              <image src='{{item.items[0].imageUrl}}'></image>
+            </view>
+            <view class='goodsInfo'>
+              <view class='top'>
+                <view class='title'>{{item.items[0].title}}</view>
+                <view class='price'>¥{{item.items[0].totalPrice/100}}</view>
+              </view>
+              <view class='bottom'>
+                <view class='model'>{{item.items[0].facetJson}}</view>
+                <view class='num'>×{{item.items[0].quantity}}</view>
+              </view>
+            </view>
+          </view>
+          <view class='orderState'>
+            <view class='notShipped' wx:if="{{item.status == 'CANCALLED'}}">
+              <text>已取消</text>
+            </view>
+            <view class='notShipped' wx:if="{{item.status == 'PAYED'}}">
+              <text>待发货</text>
+            </view>
+            <view class='shipped'>
+              <text class='toLogistics' bindtap='toLogistics' wx:if="{{item.status == 'DELIVERYING'}}" data-id='{{item.id}}'>查看物流</text>
+              <text class='takeOver' bindtap='showDeliveryModal' wx:if="{{item.status == 'DELIVERYING'}}" data-id='{{item.id}}'>确认收货</text>
+              <text class='toLogistics' bindtap='cancelOrder' wx:if="{{item.status == 'NEW'}}" data-id='{{item.id}}'>取消订单</text>
+              <text class='takeOver' bindtap='toPay' wx:if="{{item.status == 'NEW'}}" data-id='{{item.id}}'>去支付</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class='orderList'>
+        <view class='order' wx:for="{{orderList}}" wx:key="*id" wx:if="{{item.status == 'PAYED'}}">
+          <view class='orderInfo'>
+            <view class='goodsLogo'>
+              <image src='{{item.items[0].imageUrl}}'></image>
+            </view>
+            <view class='goodsInfo'>
+              <view class='top'>
+                <view class='title'>{{item.items[0].title}}</view>
+                <view class='price'>¥{{item.items[0].totalPrice/100}}</view>
+              </view>
+              <view class='bottom'>
+                <view class='model'>{{item.items[0].facetJson}}</view>
+                <view class='num'>×{{item.items[0].quantity}}</view>
+              </view>
+            </view>
+          </view>
+          <view class='orderState'>
+            <view class='notShipped'>
+              <text>待发货</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class='orderList'>
+        <view class='order' wx:for="{{orderList}}" wx:key="*id" wx:if="{{item.status == 'DELIVERYING'}}">
+          <view class='orderInfo'>
+            <view class='goodsLogo'>
+              <image src='{{item.items[0].imageUrl}}'></image>
+            </view>
+            <view class='goodsInfo'>
+              <view class='top'>
+                <view class='title'>{{item.items[0].title}}</view>
+                <view class='price'>¥{{item.items[0].totalPrice/100}}</view>
+              </view>
+              <view class='bottom'>
+                <view class='model'>{{item.items[0].facetJson}}</view>
+                <view class='num'>×{{item.items[0].quantity}}</view>
+              </view>
+            </view>
+          </view>
+          <view class='orderState'>
+            <view class='shipped'>
+              <text class='toLogistics'>查看物流</text>
+              <text class='takeOver' bindtap='showDeliveryModal'>确认收货</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class='orderList'>
+        <view class='order' wx:for="{{orderList}}" wx:key="*id" wx:if="{{item.status == 'RECEIVED'}}">
+          <view class='orderInfo'>
+            <view class='goodsLogo'>
+              <image src='{{item.items[0].imageUrl}}'></image>
+            </view>
+            <view class='goodsInfo'>
+              <view class='top'>
+                <view class='title'>{{item.items[0].title}}</view>
+                <view class='price'>¥{{item.items[0].totalPrice/100}}</view>
+              </view>
+              <view class='bottom'>
+                <view class='model'>{{item.items[0].facetJson}}</view>
+                <view class='num'>×{{item.items[0].quantity}}</view>
+              </view>
+            </view>
+          </view>
+          <view class='orderState'>
+            <view class='shipped'>
+              <text class='toLogistics'>查看物流</text>
+              <text class='takeOver' bindtap='showDeliveryModal'>确认收货</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+</swiper>
+
+<view class='hoverView' wx:if="{{deliveryModal}}" bindtap='hideDeliveryModal'>
+  <view class='deliveryModal'>
+    <view class='title'>确认收货吗？</view>
+    <view class='operation'>
+      <button class='cancelBtn'>取消</button>
+      <button class='confirmBtn' bindtap='confirmDelivery'>确认</button>
+    </view>
+  </view>
+</view>

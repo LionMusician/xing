@@ -1,0 +1,39 @@
+/**app.wxss**/
+page{background: #1A1D26;height: 100%;color: #fff;}
+view{box-sizing: border-box;}
+.cells{width: 730rpx;margin: 19rpx auto;color: #fff;font-size: 32rpx;border-radius: 10rpx;padding-left: 20rpx;background: #21212b;}
+.cell{padding: 20rpx 20rpx 20rpx 0;height: 72rpx;line-height: 72rpx;width: 690rpx;box-sizing: content-box;border-bottom: 2rpx solid #1A1D26;}
+.cellLast{border: none;}
+.cell>view{display: inline-block;}
+.cell_ft{float: right;}
+.nextBtn{width: 18rpx;height: 34rpx;vertical-align: middle;}
+
+.goods{width: 730rpx;margin: 0 auto 12rpx;background: #21212b;border-radius: 20rpx;height: 180rpx;}
+.goods image{width: 140rpx;height: 140rpx;margin: 20rpx;vertical-align: top;float: left;}
+.goods .title{font-size: 30rpx;color: #fff;width: 500rpx;margin-top: 34rpx;float: left;}
+/*确认收货弹框*/
+.hoverView{position: absolute;z-index: 3;background: rgba(0, 0, 0, .3);display: flex;flex-direction: column;justify-content: center;top: 0;bottom: 0;left: 0;right: 0;}
+.deliveryModal{width: 620rpx;height: 320rpx;background: #fff;border-radius: 20rpx;margin: 0 auto;}
+.deliveryModal .title{font-size: 32rpx;color: #333;margin: 70rpx auto 98rpx;width: 100%;line-height: 32rpx;height: 32rpx;text-align: center;}
+.deliveryModal .operation{display: flex;flex-direction: row;justify-content: space-around;}
+.deliveryModal .operation button{width: 240rpx;height: 80rpx;font-size: 30rpx;color: #fff;border-radius: 10rpx;}
+.deliveryModal .operation .cancelBtn{background: #cdcdcd;}
+.deliveryModal .operation .confirmBtn{background: #8050eb;}
+/*订单页*/
+.orderList{width: 100%;}
+.orderList .order{width: 730rpx;margin: 0 auto 12rpx;border-radius: 20rpx;background: #21212b;}
+.orderInfo{display: flex;width: 100%;flex-direction: row;}
+.orderInfo .goodsLogo{margin: 30rpx 20rpx;}
+.orderInfo .goodsLogo image{width: 140rpx;height: 140rpx;background: red;border-radius: 10rpx;}
+.orderInfo .goodsInfo{margin: 30rpx 20rpx 0 0;display: flex;flex-direction: column;width: 550rpx;}
+.orderInfo .goodsInfo .top{font-size: 30rpx;color: #fff;line-height: 40rpx;display: flex;flex-direction: row;justify-content: space-between;height: 80rpx;margin-bottom: 30rpx;}
+.orderInfo .goodsInfo .top .title{text-align: left;margin-right: 50rpx;}
+.orderInfo .goodsInfo .top .price{color: #e36159;}
+.orderInfo .goodsInfo .bottom{font-size: 26rpx;color: #999;display: flex;flex-direction: row;justify-content: space-between;}
+.orderState{width: 100%;}
+.orderState .shipped{margin: 50rpx 0 40rpx;text-align: right;}
+.orderState .shipped text{display: inline-block;width: 180rpx;height: 68rpx;font-size: 28rpx;line-height: 68rpx;text-align: center;margin-right: 20rpx;border-radius: 10rpx;margin-bottom: 40rpx;}
+.orderState .shipped .toLogistics{color: #fff;border: 2rpx solid #999;}
+.orderState .shipped .takeOver{color: #8050eb;border: 2rpx solid #8050eb;}
+.orderState .notShipped{margin: 0 20rpx;border-top: 2rpx solid #1A1D26;text-align: right;}
+.orderState .notShipped text{display: inline-block;font-size: 28rpx;color: #fff;margin: 40rpx 0;}

@@ -1,0 +1,56 @@
+<!--pages/index/search/search.wxml-->
+<import src="../../../template/tabBar.wxml" />
+<template is="searchBar" data="{{searchBar: searchBar}}" />
+<view class='hotBrands' wx:if="{{!goodsList && !inputOnfocus}}">
+  <view class='title'>
+    <image src='../../images/shot/hot@2x.png' style='width:26rpx;height:34rpx;'></image>
+    <text>热门品牌</text>
+  </view>
+  <view class='brandList'>
+    <image class='firstBrand' src='{{brandList[0].imageUrl}}' data-id='{{brandList[0].id}}' bindtap='toBrandPage'></image>
+    <view class='box'>
+      <image class='otherBrand' src='{{brandList[1].imageUrl}}' data-id='{{brandList[1].id}}' bindtap='toBrandPage'></image>
+      <image class='otherBrand' src='{{brandList[2].imageUrl}}' data-id='{{brandList[2].id}}' bindtap='toBrandPage'></image>
+    </view>
+    <view class='box'>
+      <image class='otherBrand' src='{{brandList[3].imageUrl}}' data-id='{{brandList[3].id}}' bindtap='toBrandPage'></image>
+      <image class='otherBrand' src='{{brandList[4].imageUrl}}' data-id='{{brandList[4].id}}' bindtap='toBrandPage'></image>
+    </view>
+  </view>
+</view>
+<view class="swiper-tab" wx:if="{{goodsList || inputOnfocus}}">
+    <view class="swiper-tab-list" data-current="0" bindtap="swichNav">
+      <text class=" {{currentTab==0 ? 'on' : ''}}">商品</text>
+    </view>
+    <view class="swiper-tab-list " data-current="1" bindtap="swichNav">
+      <text class="{{currentTab==1 ? 'on' : ''}}">用户</text>
+    </view>
+</view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+    <swiper-item>
+      <view class='goodsList'>
+        <view class='goods' wx:for="{{goodsList}}" wx:key="*id" wx:key='*id' bindtap='toGoodsVideo'  data-goodsid='{{item.id}}'>
+          <image src='{{item.coverUrl}}'></image>
+          <view class='goodsInfo'>
+            <view class='title'>{{item.name}}</view>
+            <view class='videoNum'>共有{{item.videoCount || 0}}个视频</view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class='userList'>
+        <view class='user goods' wx:for="{{userList}}" wx:key="*id" bindtap='toOtherUser' data-userid='{{item.id}}'>
+          <view class='userView'>
+            <image class='userLogo' src='{{item.avatarUrl}}'></image>
+            <view class='userInfo'>
+              <view class='userName'>{{item.nickName}}</view>
+              <view class='fansNum'>粉丝：{{item.userActivityData.fanCount || 0}}</view>
+            </view>
+          </view>
+          <view class='fansNum works'>{{item.userActivityData.workCount}}个作品</view>
+        </view>
+      </view>
+    </swiper-item>
+</swiper>  
+

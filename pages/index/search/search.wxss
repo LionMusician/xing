@@ -1,0 +1,29 @@
+/* pages/index/search/search.wxss */
+.swiper-tab{width: 100%;border-bottom: 1rpx solid #272734;text-align: center;line-height: 88rpx;display: flex;flex-direction: row;height: 92rpx;position: fixed;top: 120rpx;z-index: 100;background: #1A1D26;}
+.swiper-tab-list{font-size: 32rpx;color: #999;flex: 1;}
+.swiper-tab-list text{display: inline-block;width: 160rpx;}
+.on{color: #fff;border-bottom: 4rpx solid #8050eb;}
+.swiper-box{display: block; height: 100%; width: 100%; overflow: hidden;padding-top: 222rpx;}  
+.swiper-box view{text-align: center;}
+.hotBrands{line-height: 92rpx;width: 690rpx;margin: 140rpx auto 30rpx;}
+.hotBrands image{vertical-align: middle;margin-right: 17rpx;}
+.hotBrands text{font-size: 32rpx;}
+.brandList{width: 690rpx;margin: 0 auto;display: flex;}
+.brandList view,.brandList image{display: inline-block;border-radius: 10rpx;margin: 0;}
+.brandList .box{width: 224rpx;}
+.brandList .firstBrand{width: 240rpx;height: 294rpx;background: red;}
+.brandList .otherBrand{width: 210rpx;height: 138rpx;margin: 0 0 14rpx 14rpx;background: red;}
+
+.goodsList{width: 100%;}
+.goodsList .goods{position: relative;}
+.goodsList .goods .title{text-align: left;line-height: 40rpx;}
+.goodsList .goods .videoNum{color: #999;font-size: 26rpx;text-align: right;position: absolute;right: 20rpx;bottom: 20rpx;}
+
+.userList{width: 100%;}
+.userList .user{display: flex;flex-direction: row;justify-content: space-between;height: 120rpx;}
+.userList .user .userView{}
+.userList .user .userLogo{width: 80rpx;height: 80rpx;margin: 20rpx;border-radius: 10rpx;background: red;}
+.userList .user .userInfo{display: flex;flex-direction: column;text-align: left;margin: 26rpx 0;}
+.userList .user .userInfo .userName{font-size: 30rpx;margin-bottom: 14rpx;text-align: left;}
+.userList .user .fansNum{font-size: 26rpx;color: #999;text-align: left;}
+.userList .user .works{text-align: right;line-height: 120rpx;margin-right: 20rpx;}

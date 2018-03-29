@@ -1,0 +1,25 @@
+<!--pages/user/myEarn/myEarn.wxml-->
+<view>
+  <view class='moneyBox'>
+    <view class='moneyLogo'>
+      <image src='../../images/user/money2@2x.png'></image>
+    </view>
+    <view class='balance'>余额：{{activityData.balance || 0}}元</view>
+    <view class='income'>总收益：{{activityData.totalIncome || 0}}元</view>
+  </view>
+  <!-- <view class='incomeList'>
+    <view class='income'>
+      <view class='top'>
+        <view class='userLogo'>
+          <image src='{{item.url}}'></image>
+        </view>
+        <view class='title'>购买了阿迪达斯滑板多色可选2018年新款滑板，收<text>299</text>元</view>
+      </view>
+      <view class='bottom'>
+        <view class='userName'>喵小姐的鱼</view>
+        <view class='time'>2018.1.24 20：05</view>
+      </view>
+    </view>
+  </view> -->
+  <view class='bottomBtn' bindtap='toCash'>我要提现</view>
+</view>

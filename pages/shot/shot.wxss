@@ -1,0 +1,26 @@
+/* pages/shot/shot.wxss */
+.container{width: 100%;position: relative;}
+/* .searchBar{margin: 30rpx auto 40rpx;width: 706rpx;} */
+.searchBar input{width: 540rpx;height: 80rpx;border-radius: 40rpx;background: #3D3E48;padding: 0 30rpx;margin-left: 30rpx;display: inline-block;color: #fff;font-size: 30rpx;}
+.searchBar text{color: #fff;display: inline-block;height: 80rpx;line-height: 80rpx;font-size: 30rpx;}
+.goodsList{margin-top: 130rpx;}
+/*.goods在app.wxss*/
+.showGoodsView{width: 100%;height: 220rpx;position: fixed;bottom: 0;left: 0;z-index: 101;border-radius: 20rpx 20rpx 0 0;background: #fff;margin: 0;}
+.showGoodsView image{margin: 40rpx 15rpx 40rpx 30rpx;}
+.showGoodsView .title{color: #333;margin: 46rpx 15rpx 20rpx 0;width: 360rpx;}
+.showGoodsView .price{font-size: 34rpx;color: #e36159;}
+.showGoodsView .closeBtn{position: absolute;width: 24rpx;height: 24rpx;padding:22rpx;margin: 0;top: 0;right: 0;}
+.showGoodsView .buyBtn{font-size: 30rpx;color: #f25657;position: absolute;bottom: 30rpx;right: 30rpx;border: 2rpx solid #f25657;border-radius: 10rpx;width: 160rpx;height: 68rpx;line-height: 68rpx;text-align: center;}
+.goodsInfoClass{height: 1000rpx;font-size: 32rpx;color: #333;bottom: 100rpx;}
+.goodsInfoClass .chooseToShot{width: 100%;height: 100rpx;font-size: 32rpx;color: #fff;background: #e36159;line-height: 100rpx;text-align: center;position: fixed;bottom: 0;left: 0;}
+.goodsInfoClass .title{text-align: center;width: 100%;margin: 41rpx 0 40rpx;}
+.goodsInfoClass .scrollView{width: 100%;height: 882rpx;overflow-y: scroll;}
+.goodsInfoClass .goodsBigPic{width: 690rpx;height: 400rpx;border-radius: 10rpx;margin: 0 auto 20rpx;background: #ccc;display: block;}
+.goodsInfoClass .goodsName{margin: 20rpx auto;text-align: left;width: 690rpx;}
+.goodsInfoClass .price{width: 690rpx;margin: 0 auto 30rpx;text-align: left;}
+.goodsInfoClass .price text{font-size: 28rpx;color: #999;margin: 0;}
+.goodsInfoClass .colorfulTitle{width: 240rpx;height: 60rpx;border: 2rpx solid #333;border-radius: 20rpx;text-align: center;line-height: 60rpx;font-size: 30rpx;margin: 30rpx auto;}
+.goodsInfoClass .colorfulPics{width: 678rpx;margin: 0 auto;}
+.goodsInfoClass .colorfulPics .picBox{margin: 0 30rpx;width: 279rpx;float: left;}
+.goodsInfoClass .colorfulPics .picBox image{width: 279rpx;height: 170rpx;margin: 0;}
+.goodsInfoClass .colorfulPics .picBox .picTitle{color: #333;text-align: center;width: 100%;}

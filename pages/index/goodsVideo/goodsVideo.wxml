@@ -1,0 +1,14 @@
+<!--pages/index/goodsVideo/goodsVideo.wxml-->
+<view class='brandList'>
+  <view class='brand'>
+    <view class='goodsInfo'>
+      <image class='goodsLogo' src='{{goodsInfo.coverUrl}}'></image>
+      <view class='right'>
+        <view class='title'>{{goodsInfo.name}}</view>
+      </view>
+    </view>
+    <view class='videoList'>
+      <image class='videoImage' wx:for="{{videoList}}" wx:key="*id" wx:for-item="videoItem" src='{{videoItem.imageUrl}}'></image>
+    </view>
+  </view>
+</view>
