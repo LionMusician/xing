@@ -1,0 +1,24 @@
+/* pages/user/myOrder/myOrder.wxss */
+.swiper-tab{width: 100%;border-bottom: 1rpx solid #21212b;text-align: center;line-height: 88rpx;display: flex;flex-direction: row;height: 92rpx;position: fixed;top: 0;z-index: 100;background: #1A1D26;} 
+.swiper-tab-list{font-size: 32rpx;color: #999;flex: 1;}
+.swiper-tab-list text{display: inline-block;width: 140rpx;}
+.on{color: #fff;border-bottom: 4rpx solid #8050eb;}
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden;padding-top: 122rpx;}  
+.swiper-box view{text-align: center;}
+.orderList{width: 100%;}
+.orderList .order{width: 730rpx;margin: 0 auto 12rpx;border-radius: 20rpx;background: #21212b;}
+.orderInfo{display: flex;width: 100%;flex-direction: row;}
+.orderInfo .goodsLogo{margin: 30rpx 20rpx;}
+.orderInfo .goodsLogo image{width: 140rpx;height: 140rpx;background: red;border-radius: 10rpx;}
+.orderInfo .goodsInfo{margin: 30rpx 20rpx 0 0;display: flex;flex-direction: column;}
+.orderInfo .goodsInfo .top{font-size: 30rpx;color: #fff;line-height: 40rpx;display: flex;flex-direction: row;justify-content: space-between;height: 80rpx;margin-bottom: 30rpx;}
+.orderInfo .goodsInfo .top .title{text-align: left;margin-right: 50rpx;}
+.orderInfo .goodsInfo .top .price{color: #e36159;}
+.orderInfo .goodsInfo .bottom{font-size: 26rpx;color: #999;display: flex;flex-direction: row;justify-content: space-between;}
+.orderState{width: 100%;}
+.orderState .shipped{margin: 50rpx 0 40rpx;text-align: right;}
+.orderState .shipped text{display: inline-block;width: 180rpx;height: 68rpx;font-size: 28rpx;line-height: 68rpx;text-align: center;margin-right: 20rpx;border-radius: 10rpx;margin-bottom: 40rpx;}
+.orderState .shipped .toLogistics{color: #fff;border: 2rpx solid #999;}
+.orderState .shipped .takeOver{color: #8050eb;border: 2rpx solid #8050eb;}
+.orderState .notShipped{margin: 0 20rpx;border-top: 2rpx solid #1A1D26;text-align: right;}
+.orderState .notShipped text{display: inline-block;font-size: 28rpx;color: #fff;margin: 40rpx 0;}

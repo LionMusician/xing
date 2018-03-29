@@ -1,0 +1,147 @@
+<!--index.wxml-->
+<import src="../../template/tabBar.wxml" />
+<template is="tabBar" data="{{tabBar: tabBar}}" />
+<block wx:if="{{goodsView.show}}">
+  <template is="goodsView" data="{{goodsView: goodsView}}" /> 
+</block>
+<view class="container">
+  <!--是否显示圆点，自动播放， 间隔时间， 监听滚动和点击事件-->
+  <!-- <swiper duration="500" bindchange="" style='height:{{swiperHeight}}px' > -->
+  <swiper duration="500" bindchange="" >
+  <!--swiper-item只能包含一个节点再多会自动删除-->
+      <swiper-item>
+          <swiper duration="500" bindchange="" vertical='true' >
+            <!--swiper-item只能包含一个节点再多会自动删除-->
+                <swiper-item>
+                    <view>
+                      <view class='searchBtn'>
+                        <image src='../images/index/search.png' bindtap='toSearch'></image>
+                      </view>
+                      <view class='funBtns'>
+                        <view class="tip" bindtap='follow'>
+                          <image src='{{followUrl}}' style='width:65rpx;height:57rpx;'></image>
+                          <text>72.5W</text>
+                        </view>
+                        <view class="tip" bindtap='showComment'>
+                          <image src='../images/index/xiaoxi@2x.png' style='width:62rpx;height:60rpx;'></image>
+                          <text>1.5W</text>
+                        </view>
+                        <view class="tip" bindtap='showShare'>
+                          <image src='../images/index/fenxiang@2x.png' style='width:62rpx;height:62rpx;'></image>
+                          <text>1.2W</text>
+                        </view>
+                      </view>
+                      <view class='videoInfo'>
+                        <view class='userLogo'>
+                          <image src='../images/index/head-1@2x.png' class='userPic'></image>
+                          <text>视频文字介绍……</text>
+                          <image src='../images/index/guanzhu@2x.png' class='follow'></image>
+                        </view>
+                        <view class='brandName' bindtap='showGoodsView'>品牌名称可点击</view>
+                      </view>
+                    </view>
+                </swiper-item>
+                <swiper-item>
+                    <view style="background: green;"></view>
+                </swiper-item>
+                    <swiper-item>
+                      <view style="background: blue;"></view>
+                </swiper-item>
+            </swiper>
+      </swiper-item>
+      <swiper-item>
+          <view style="background: green;"></view>
+      </swiper-item>
+          <swiper-item>
+            <view style="background: blue;"></view>
+      </swiper-item>    
+  </swiper>
+  <view class='hoverView' wx:if="{{shareViewShow}}">
+    <view class='shareView'>
+      <view class='top'>分享至</view>
+      <view class='list'>
+        <view class='weixin tip'>
+          <image src='../images/index/weixin@2x.png'></image>
+          <text>微信好友</text>
+        </view>
+        <view class='friends tip'>
+          <image src='../images/index/pengyou@2x.png'></image>
+          <text>朋友圈</text>
+        </view>
+        <view class='qq tip'>
+          <image src='../images/index/QQ@2x.png'></image>
+          <text>QQ</text>
+        </view>
+      </view>
+      <image class='closeBtn' src='../images/shot/close@2x.png' bindtap='closeShareView'></image>
+    </view>
+  </view>
+  <view class='hoverView' wx:if="{{commentViewShow}}">
+    <view class='shareView commentView'>
+      <view class='top'>共有15276条评论</view>
+      <view class='list'>
+        <view class='tip'>
+          <image class='userLogo' src=''></image>
+          <view class='commentBox'>
+            <view class='comment'>
+              <view class='userName'>喵小姐的鱼</view>
+              <view class='content'>什么鬼啊，完全看不懂啊！我之前买过一个，说实话，还可以的。</view>
+              <view class='time'>12:56:58</view>
+            </view>
+            <view class='heart'>
+              <image src='../images/index/zan-black@2x.png'></image>
+              <text>2</text>
+            </view>
+          </view>
+        </view>
+        <view class='tip'>
+          <image class='userLogo' src=''></image>
+          <view class='commentBox'>
+            <view class='comment'>
+              <view class='userName'>喵小姐的鱼</view>
+              <view class='content'>什么鬼啊，完全看不懂啊！我之前买过一个，说实话，还可以的。</view>
+              <view class='time'>12:56:58</view>
+            </view>
+            <view class='heart'>
+              <image src='../images/index/zan-black@2x.png'></image>
+              <text>2</text>
+            </view>
+          </view>
+        </view>
+        <view class='tip'>
+          <image class='userLogo' src=''></image>
+          <view class='commentBox'>
+            <view class='comment'>
+              <view class='userName'>喵小姐的鱼</view>
+              <view class='content'>什么鬼啊，完全看不懂啊！我之前买过一个，说实话，还可以的。</view>
+              <view class='time'>12:56:58</view>
+            </view>
+            <view class='heart'>
+              <image src='../images/index/zan-black@2x.png'></image>
+              <text>2</text>
+            </view>
+          </view>
+        </view>
+        <view class='tip'>
+          <image class='userLogo' src=''></image>
+          <view class='commentBox'>
+            <view class='comment'>
+              <view class='userName'>喵小姐的鱼</view>
+              <view class='content'>什么鬼啊，完全看不懂啊！我之前买过一个，说实话，还可以的。什么鬼啊，完全看不懂啊！我之前买过一个，说实话，还可以的。什么鬼啊，完全看不懂啊！我之前买过一个，说实话，还可以的。</view>
+              <view class='time'>12:56:58</view>
+            </view>
+            <view class='heart' bindtap='commentFollow'>
+              <image src='{{zanSrc}}'></image>
+              <text style='color:{{zanNum}}'>2</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='bottom'>
+        <input placeholder='请发表您的评论' placeholder-style='font-size:30rpx;color:#999;' cursor-spacing='10'></input>
+        <button>发送</button>
+      </view>
+      <image class='closeBtn' src='../images/shot/close@2x.png' bindtap='closeCommentView'></image>
+    </view>
+  </view>
+</view>

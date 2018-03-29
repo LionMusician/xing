@@ -1,0 +1,28 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/search/search",
+    "pages/shot/shot",
+    "pages/shot/shotVideo/shotVideo",
+    "pages/user/user",
+    "pages/user/set/set",
+    "pages/user/mail/mail",
+    "pages/user/mail/privateLetter/privateLetter",
+    "pages/user/userinfo/userinfo",
+    "pages/user/secret/secret",
+    "pages/user/secret/whocansend/whocansend",
+    "pages/user/secret/blacklist/blacklist",
+    "pages/user/myEarn/myEarn",
+    "pages/user/myEarn/cash/cash",
+    "pages/user/myOrder/myOrder",
+    "pages/user/myOrder/orderInfo/orderInfo",
+    "pages/courier/courier"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#141823",
+    "navigationBarTitleText": "猩次元",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#1A1D26"
+  }
+}

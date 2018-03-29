@@ -1,0 +1,2 @@
+<!--pages/shot/shotVideo/shotVideo.wxml-->
+<button bindtap='submitVideo'>上传</button>

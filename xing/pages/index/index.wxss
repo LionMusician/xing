@@ -1,0 +1,40 @@
+/**index.wxss**/
+@import "../../template/goodsView.wxss";
+.container{height: 100%;width: 100%;}
+swiper{height: 100%;}
+swiper-item>view{height: 100%;position: relative;}
+.searchBtn{position: absolute;top: 0;right: 0;}
+.searchBtn image{width: 43rpx;height: 42rpx;padding: 40rpx;}
+.funBtns{display: flex;flex-direction: column;justify-content: center;width: 80rpx;font-size: 26rpx;color: #fff;position: absolute;bottom: 180rpx;right: 40rpx;}
+.funBtns .tip{width: 100%;text-align: center;}
+.funBtns .tip image{margin: 60rpx auto 20rpx;}
+.videoInfo{width: 500rpx;position: absolute;bottom: 140rpx;left: 40rpx;}
+.videoInfo .userLogo{position: relative;}
+.videoInfo .userLogo .userPic{width: 84rpx;height: 84rpx;border-radius: 50%;margin: 0 20rpx 16rpx 0rpx;vertical-align: middle;}
+.videoInfo .userLogo .follow{width: 32rpx;height: 32rpx;position: absolute;top: 68rpx;left: 26rpx;}
+.videoInfo .userLogo text{font-size: 26rpx;color: #fff;}
+.videoInfo .brandName{font-size: 28rpx;color: #e36159;padding: 40rpx 40rpx 40rpx 0;}
+.hoverView{position: fixed;top: 0;bottom: 0;left: 0;right: 0;z-index: 101;}
+.shareView{width: 100%;background: #fff;height: 330rpx;border-radius: 20rpx 20rpx 0rpx 0rpx;position: fixed;z-index: 101;bottom: 0;left: 0;}
+.shareView .top{font-size: 28rpx;color: #666;width: 690rpx;margin: 40rpx auto;border-bottom: 2rpx solid #ebebeb;padding-bottom: 40rpx;}
+.shareView .list{width: 690rpx;display: flex;flex-direction: row;margin: 40rpx auto;}
+.shareView .list .tip{display: flex;flex-direction: column;width: 180rpx;justify-content: center;text-align: center;}
+.shareView .list .tip image{width: 80rpx;height: 80rpx;margin: 0 auto 22rpx;}
+.shareView .list .tip text{font-size: 28rpx;color: #333;text-align: center;}
+.closeBtn{position: absolute;width: 24rpx;height: 24rpx;padding:22rpx;margin: 0;top: 0;right: 0;}
+.commentView{height: 800rpx;}
+.commentView .top{font-size: 24rpx;color: #999;padding: 30rpx 0;margin: 0 auto;}
+.commentView .list{overflow-y: scroll;margin: 0 auto;height: 614rpx;width: 690rpx;display: block;}
+.commentView .list::-webkit-scrollbar{display: none;}
+.commentView .list .tip{width: 100%;padding-top: 30rpx;flex-direction: row;}
+.commentView .list .tip .userLogo{border-radius: 10rpx;background: red;margin: 14rpx 20rpx 0 0;}
+.commentView .list .tip .commentBox{display: flex;flex-direction: row;font-size: 28rpx;justify-content: space-between;width: 590rpx;border-bottom: 2rpx solid #ebebeb;padding-bottom: 30rpx;}
+.commentView .list .tip .comment{width: 17em;height: auto;}
+.commentView .list .tip .userName{color: #999;margin-bottom: 14rpx;text-align: left;}
+.commentView .list .tip .content{color: #333;margin-bottom: 14rpx;text-align: left;line-height: 30rpx;width: 17em;}
+.commentView .list .tip .time{color: #cdcdcd;font-size: 22rpx;text-align: left;}
+.commentView .list .tip .heart{display: flex;flex-direction: column;justify-content: center;width: 60rpx;font-size: 24rpx;color: #999;}
+.commentView .list .tip .heart image{width: 38rpx;height: 33rpx;margin-bottom: 16rpx;}
+.commentView .bottom{position: absolute;height: 100rpx;width: 100%;z-index: 102;background: #fff;display: flex;flex-direction: row;padding: 13rpx 30rpx;border-top: 2rpx solid #ebebeb;bottom: 0;left: 0;box-shadow: 0 0 2rpx #ebebeb;}
+.commentView .bottom input{height: 74rpx;line-height: 74rpx;margin: auto;color: #999;font-size: 30rpx;width: 550rpx;}
+.commentView .bottom button{height: 74rpx;width: 140rpx;background: #8050eb;border-radius: 10rpx;line-height: 74rpx;text-align: center;font-size: 28rpx;color: #fff;}

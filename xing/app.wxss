@@ -1,0 +1,13 @@
+/**app.wxss**/
+page{background: #1A1D26;height: 100%;color: #fff;}
+view{box-sizing: border-box;}
+.cells{width: 730rpx;margin: 19rpx auto;color: #fff;font-size: 32rpx;border-radius: 10rpx;padding-left: 20rpx;background: #21212b;}
+.cell{padding: 20rpx 20rpx 20rpx 0;height: 72rpx;line-height: 72rpx;width: 690rpx;box-sizing: content-box;border-bottom: 2rpx solid #1A1D26;}
+.cellLast{border: none;}
+.cell>view{display: inline-block;}
+.cell_ft{float: right;}
+.nextBtn{width: 18rpx;height: 34rpx;vertical-align: middle;}
+
+.goods{width: 730rpx;margin: 0 auto 12rpx;background: #21212b;border-radius: 20rpx;height: 180rpx;}
+.goods image{width: 140rpx;height: 140rpx;margin: 20rpx;vertical-align: top;float: left;}
+.goods .title{font-size: 30rpx;color: #fff;width: 500rpx;margin-top: 34rpx;float: left;}
